@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "GITgitgit"
+title:  "GIT commit"
 date:   2017-09-11 15:10:41 +0900
-categories: jekyll update
+categories: Git
 ---
-ㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇ
 
+Commit
 
 
 {% highlight ruby %}
