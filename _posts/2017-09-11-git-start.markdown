@@ -1,0 +1,106 @@
+---
+layout: post
+title:  "GIT commit"
+date:   2017-09-11 15:10:41 +0900
+categories: Git
+---
+
+<h2>Git 시작</h2>
+
+<h3> 1. 세 가지 상태</h3>
+
+Git은 파일을 ```Committed```, ```Modified```, ```Staged``` 이렇게 세 가지 상태로 관리한다.
+<h5>Committed</h5>
+데이터가 로컬 데이터베이스에 안전하게 저장됐다는 것을 의미한다.
+<h5>Modified</h5>
+수정된 파일이 아직 staged 상태로 올라가지 않은 상태를 말한다.
+<h5>Staged</h5>
+현재 수정한 파일을 곧 커밋할 것이라고 표시한 상태를 의미한다.
+
+<h3>2. 파일의 구분</h3>
+
+```Git```은 또한 모든 파일을 ```Tracted(관리대상)```와 ```Untracted(관리대상 아님)```로 나눌 수 있다.
+```Untracted``` 파일은 워킹 디렉토리에 있는 파일 중 ```snapshot```에도 ```Staging Area```에도 포함되지 않는 파일이다.
+
+<h3>3. Git 저장소(Repository) 만들기</h3>
+
+```Git``` 저장소를 만드는 방법은 두 가지다. ```기존 프로젝트나 디렉토리```를 ```Git 저장소```로 만드는 방법과 다른 서버에 있는 ```저장소```를 ```Clone```하는 방법이 있다.
+
+<h5>기존 디렉토리를 Git 저장소로 만들기</h5>
+원하는 프로젝트의 디렉토리로 이동한다.
+<pre><code>$ cd /Users/user/your_repository </code></pre>
+그리고 아래 명령어를 입력한다.
+<pre><code>$ git init </code></pre>
+
+<h5> 기준 저장소를 Clone 하기</h5>
+다른 프로젝트에 Contribute 하거나 Git 저장소를 복사하고 싶을 때 clone 명령을 사용한다.
+2siwon 라이브러리 소스코드를 clone 하려면 다음과 같이 실행한다.
+<pre><code>$ git clone https://github.com/2siwon/2siwon </code></pre>
+
+아래 명령어는 디렉토리 이름이 mylibgit 이라는 것만 제외하면 앞에 사용한 명령어와 동일하다.
+<pre><code>git clone https://github.com/2siwon/2siwon mylibgit </code></pre>
+
+</h3>4. 기본 명령어</h3>
+
+<h4>status</h4>
+```git status```는 현재 파일들의 상태들을 보여준다. untracted files는 초록색 tracted fils는 빨간색으로 나타내주며 확인을 자주하기 때문에 가장 많이 쓰이는 명령어 중 하나이다.
+README.md 파일을 생성한 직후  status 명령어를 실행해보자.
+<pre><code>$ echo 'My Project' > README.md
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracted files:
+	(use "git add <file>..." to include in what will be committed)
+	**README.md**
+nothing added to commit but untracted files present (use "git add" to track)</code></pre>
+Untracted files에 README.md파일이 추가되어 있는 걸 볼 수 있다.
+
+<h4>add</h4>
+```git add```는 ```untracted``` 파일을 ```tracted``` 파일로 바꿔주며 staged 상태가 된다.
+앞에서 만든 README.md 파일을 add 해보자.
+<pre><code>$ git add README.md</code></pre>
+그리고 다시 ```status``` 명령어를 사용하면
+<pre><code>Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+	**new file:   README.md**</code></pre>
+```add -A```모든 ```untracted files```를 ```add```하기 위해선 아래 ```-A``` 옵션을 사용한다.
+
+<pre><code>$ git add -A </code></pre>
+
+<h3>commit</h3>
+```git commit```은 ```staged``` 상태에 있는 파일들을 로컬 데이터베이스에 그 시점의 ```snapshot```이 저장된다.
+<pre><code>$ git commit</code></pre>
+이 명령어를 입력하면 편집 프로그램(vi, nano..)이 실행되어 해당 ```commit```의 제목과 내용을 입력 할 수 있다. 또한 ```-a``` 옵션을 사용하면 ```untracted``` 상태의 파일을 자동으로 ```add```하여 ```staging area```에 넣는다.<br><br>
+```--amend```옵션은 너무 일찍 commit했거나 어떤 파일을 누락했을 때 그리고 commit 메시지를 잘못 적었을 때 한다.
+<pre><code>$ git commit --amend</code></pre>
+
+<h4>diff</h4>
+```git diff``` 명령을 실행하면 ```staged``` 된 파일과 수정 후 아직 ```staged``` 상태가 아닌 파일을 비교해 볼 수 있다. ```staged``` 상태인 파일은 ```git diff --cached``` 또는 ```git diff --staged``` 옵션으로 확인한다.
+
+<pre><code>$ git diff</code></pre>
+ex) ```.gitignore``` 파일은 ```staged``` 상태이고 내용은 ```*.DS_Store```라고 해보자. 이 파일에 ```.AppleDouble``` 이라는 내용을 한 줄 추가하고 저장 후 ```git diff```를 한다.
+<pre><code>diff --git a/.gitignore b/.gitignore
+index 56266d3..4313710 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,2 @@
+-*.DS_Store
++.AppleDouble</code></pre>
+
+<h4>push</h4>
+<pre><code>$ git push -u origin master </code></pre>
+
+<h4>mv</h4>
+```git```에도 파일 이름을 수정하는``` mv``` 명령어가 존재한다. ```README.md``` 를 ```README``` 로 바꿔보자.
+<pre><code>$ git mv README.md README </code></pre>
+사실 ```git mv```명령은 아래 명령어를 수행한 것과 같다.
+<pre><code>$ mv README.md README
+$ git rm README.md
+$ git add README </code></pre>
+
+<h4>log</h4>
+```log``` 명령은 저장소의 ```commit history```를 시간순으로 보여준다. 이어서 각 ```commit의 SHA-1 체크섬```, ```name```, ```e-mail```, ```commit한 날짜```, ```commit 메시지```를 보여준다.
+<br><br>
+```-p```옵션은 각 commit의 diff 결과를 보여준다. 만약 여기에 ```-2```를 추가하면 최근 두 개의 결과만 보여준다.
+<br><br>
+```--oneline```은 각 commit을 한 라인으로 보여준다.
