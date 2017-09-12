@@ -22,7 +22,6 @@ $ cd /Users/user/your_repository
 $ git init
 ```
 
-<hr><br><br>
 ##### 기존 저장소를 Clone 하기
 다른 프로젝트에 Contribute 하거나 Git 저장소를 복사하고 싶을 때 clone 명령을 사용한다.
 2siwon 라이브러리 소스코드를 clone 하려면 다음과 같이 실행한다.
