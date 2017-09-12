@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git : 브랜치"
+title:  "Git : Branch"
 date:   2017-09-12 15:10:41 +0900
 categories: Git
 ---
@@ -77,4 +77,4 @@ $ git commit -a -m 'made other changes'
 1. 위 작업 전`master branch`가 가리키고 있던 `commit`이 `이전 commit`이 된다. <br>
 2. 그리고 `master branch`는 `commit`한 새로운 `commit`을 가리키게 된다.<br><br>
 
-이렇게되면 `master branch`와 `testing branch`는 `같은 부모 commit`을 가지게 되므로 각각 `독립적인 working directory`가 생성된다.<br><br>
+이렇게되면 `master branch`와 `testing branch`는 `같은 부모 commit`을 가지게 되므로 각각 `독립적인 working directory`가 생성된다.
