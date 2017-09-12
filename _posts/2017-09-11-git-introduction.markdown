@@ -4,7 +4,6 @@ title:  "Git : 소개"
 date:   2017-09-11 15:10:41 +0900
 categories: Git
 ---
-<link rel="stylesheet" href="./css/style.css">
 
 
 ###### Mac을 기준으로 작성된 포스팅입니다.
