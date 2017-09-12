@@ -17,10 +17,12 @@ $ cd /Users/user/your_repository
 ```
 
 그리고 아래 명령어를 입력한다.
+
 ```
 $ git init
 ```
 
+<hr><br><br>
 ##### 기존 저장소를 Clone 하기
 다른 프로젝트에 Contribute 하거나 Git 저장소를 복사하고 싶을 때 clone 명령을 사용한다.
 2siwon 라이브러리 소스코드를 clone 하려면 다음과 같이 실행한다.
@@ -38,6 +40,8 @@ $ git clone https://github.com/2siwon/2siwon mylibgit
 
 다른 사람과 협업을 위해서 리모트 저장소가 필요하다 저장소를 관리하면서 데이터를 `push`혹은 `pull` 하는 것이다. 저장소 관리는 저장소의 추가, 삭제와 브랜치를 관리하고 추적할지 말지 등을 관리하는 것이다.
 <hr><br><br>
+
+
 #### 리모트 저장소 확인하기
 
 `git remote` 명령으로 현재 프로젝트에 등록된 저장소를 확인 할 수 있다. 보통 저장소를 clone 하게 될 경우 origin이라는 이름으로 등록된다.

@@ -19,6 +19,7 @@ Git은 파일을 ```Committed```, ```Modified```, ```Staged``` 이렇게 세 가
 <h5>Staged</h5>
 현재 수정한 파일을 곧 커밋할 것이라고 표시한 상태를 의미한다.
 <hr><br><br>
+
 ### 파일의 구분
 
 `Git`은 또한 모든 파일을 `Tracted(관리대상)`와 `Untracted(관리대상 아님)`로 나눌 수 있다.
@@ -46,6 +47,7 @@ nothing added to commit but untracted files present (use "git add" to track)
 
 Untracted files에 README.md 파일이 추가되어 있는 걸 볼 수 있다.
 <hr><br><br>
+
 #### add(파일을 새로 추적하기)
 `git add`는 `untracted` 파일을 `tracted` 파일로 바꿔주며 staged 상태가 된다. 앞에서 만든 README.md 파일을 add 해보자.
 
