@@ -4,11 +4,12 @@ title:  "Git : 기초"
 date:   2017-09-12 15:10:41 +0900
 categories: Git
 ---
+
 ###### Mac을 기준으로 작성된 포스팅입니다.
 ### Git 저장소(Repository) 만들기
 
 `Git` 저장소를 만드는 방법은 두 가지다. `기존 프로젝트나 디렉토리`를 `Git 저장소`로 만드는 방법과 다른 서버에 있는 `저장소`를 `Clone`하는 방법이 있다.
-<hr><br><br>
+<hr>
 ##### 기존 디렉토리를 Git 저장소로 만들기
 원하는 프로젝트의 디렉토리로 이동한다.
 
@@ -34,11 +35,11 @@ $ git clone https://github.com/2siwon/2siwon
 $ git clone https://github.com/2siwon/2siwon mylibgit
 ```
 
-<br>
+<br><br>
 ### 리모트 저장소
 
 다른 사람과 협업을 위해서 리모트 저장소가 필요하다 저장소를 관리하면서 데이터를 `push`혹은 `pull` 하는 것이다. 저장소 관리는 저장소의 추가, 삭제와 브랜치를 관리하고 추적할지 말지 등을 관리하는 것이다.
-<hr><br><br>
+<hr>
 
 
 #### 리모트 저장소 확인하기
