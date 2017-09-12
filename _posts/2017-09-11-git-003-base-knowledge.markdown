@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Git : 기초"
-date:   2017-09-11 15:10:41 +0900
+date:   2017-09-12 15:10:41 +0900
 categories: Git
 ---
 
@@ -21,7 +21,7 @@ $ cd /Users/user/your_repository
 $ git init
 ```
 
-##### 기준 저장소를 Clone 하기
+##### 기존 저장소를 Clone 하기
 다른 프로젝트에 Contribute 하거나 Git 저장소를 복사하고 싶을 때 clone 명령을 사용한다.
 2siwon 라이브러리 소스코드를 clone 하려면 다음과 같이 실행한다.
 ```
@@ -33,7 +33,7 @@ $ git clone https://github.com/2siwon/2siwon
 git clone https://github.com/2siwon/2siwon mylibgit
 ```
 
-
+<br>
 ### 리모트 저장소
 
 다른 사람과 협업을 위해서 리모트 저장소가 필요하다 저장소를 관리하면서 데이터를 `push`혹은 `pull` 하는 것이다. 저장소 관리는 저장소의 추가, 삭제와 브랜치를 관리하고 추적할지 말지 등을 관리하는 것이다.
