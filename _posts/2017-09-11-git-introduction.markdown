@@ -8,6 +8,8 @@ categories: Git
 
 ###### Mac을 기준으로 작성된 포스팅입니다.
 
+
+
 `Git`은 주로 파일에 대한 히스토리 관리가 필요한 개발자나 디자이너들이 사용하는 [버전관리시스템(VCS - Version Control System)](https://ko.wikipedia.org/wiki/%EB%B2%84%EC%A0%84_%EA%B4%80%EB%A6%AC)이다. 파일변화를 시간에 따라 기록했다가 이 후 특정 시점의 버전을 다시 꺼내올 수 있는 시스템이다.
 
 

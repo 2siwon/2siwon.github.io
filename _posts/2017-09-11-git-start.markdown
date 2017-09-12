@@ -46,7 +46,7 @@ $ git clone https://github.com/2siwon/2siwon
 
 아래 명령어는 디렉토리 이름이 mylibgit 이라는 것만 제외하면 앞에 사용한 명령어와 동일하다.
 ```
-git clone https://github.com/2siwon/2siwon mylibgit
+$ git clone https://github.com/2siwon/2siwon mylibgit
 ```
 
 ### 4. 기본 명령어
