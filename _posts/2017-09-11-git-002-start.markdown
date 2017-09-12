@@ -5,7 +5,10 @@ date:   2017-09-11 15:10:41 +0900
 categories: Git
 ---
 
-### 1. 세 가지 상태
+
+
+
+### 세 가지 상태
 
 Git은 파일을 ```Committed```, ```Modified```, ```Staged``` 이렇게 세 가지 상태로 관리한다.
 <h5>Committed</h5>
@@ -15,42 +18,16 @@ Git은 파일을 ```Committed```, ```Modified```, ```Staged``` 이렇게 세 가
 <h5>Staged</h5>
 현재 수정한 파일을 곧 커밋할 것이라고 표시한 상태를 의미한다.
 
-### 2. 파일의 구분
+### 파일의 구분
 
 `Git`은 또한 모든 파일을 `Tracted(관리대상)`와 `Untracted(관리대상 아님)`로 나눌 수 있다.
 `Untracted` 파일은 워킹 디렉토리에 있는 파일 중 `snapshot`에도 `Staging Area`에도 포함되지 않는 파일이다.
 
-###3. Git 저장소(Repository) 만들기
 
-`Git` 저장소를 만드는 방법은 두 가지다. `기존 프로젝트나 디렉토리`를 `Git 저장소`로 만드는 방법과 다른 서버에 있는 `저장소`를 `Clone`하는 방법이 있다.
 
-#####기존 디렉토리를 Git 저장소로 만들기
-원하는 프로젝트의 디렉토리로 이동한다.
+### 기본 명령어
 
-```
-$ cd /Users/user/your_repository
-```
-
-그리고 아래 명령어를 입력한다.
-```
-$ git init
-```
-
-##### 기준 저장소를 Clone 하기
-다른 프로젝트에 Contribute 하거나 Git 저장소를 복사하고 싶을 때 clone 명령을 사용한다.
-2siwon 라이브러리 소스코드를 clone 하려면 다음과 같이 실행한다.
-```
-$ git clone https://github.com/2siwon/2siwon
-```
-
-아래 명령어는 디렉토리 이름이 mylibgit 이라는 것만 제외하면 앞에 사용한 명령어와 동일하다.
-```
-$ git clone https://github.com/2siwon/2siwon mylibgit
-```
-
-### 4. 기본 명령어
-
-#### status
+#### status(파일의 상태 확인하기)
 `git status`는 현재 파일들의 상태들을 보여준다. `untracted files`는 초록색 `tracted fils`는 빨간색으로 나타내주며 확인을 자주하기 때문에 가장 많이 쓰이는 명령어 중 하나이다.
 README.md 파일을 생성한 직후  status 명령어를 실행해보자.
 
@@ -68,7 +45,7 @@ nothing added to commit but untracted files present (use "git add" to track)
 
 Untracted files에 README.md 파일이 추가되어 있는 걸 볼 수 있다.
 
-#### add
+#### add(파일을 새로 추적하기)
 `git add`는 `untracted` 파일을 `tracted` 파일로 바꿔주며 staged 상태가 된다. 앞에서 만든 README.md 파일을 add 해보자.
 
 ```
@@ -89,7 +66,7 @@ Changes to be committed:
 $ git add -A
 ```
 
-### commit
+### commit(변경사항 커밋하기)
 
 `git commit`은 `staged` 상태에 있는 파일들을 로컬 데이터베이스에 그 시점의 `snapshot`이 저장된다.
 
@@ -103,7 +80,7 @@ $ git commit
 $ git commit --amend
 ```
 
-#### diff
+#### diff(Staged와 Unstaged 상태의 변경 내용보기)
 `git diff` 명령을 실행하면 `staged` 된 파일과 수정 후 아직 `staged` 상태가 아닌 파일을 비교해 볼 수 있다. `staged` 상태인 파일은 `git diff --cached` 또는 `git diff --staged` 옵션으로 확인한다.
 
 ```
@@ -127,7 +104,7 @@ index 56266d3..4313710 100644
 $ git push -u origin master
 ```
 
-#### mv
+#### mv(파일이름 변경하기)
 `git`에도 파일 이름을 수정하는` mv` 명령어가 존재한다. `README.md` 를 `README` 로 바꿔보자.
 ```
 $ git mv README.md README
@@ -140,9 +117,11 @@ $ git rm README.md
 $ git add README
 ```
 
-#### log
+#### log(commit 히스토리 조회하기)
 `log` 명령은 저장소의 `commit history`를 시간순으로 보여준다. 이어서 각 `commit의 SHA-1 체크섬`, `name`, `e-mail`, `commit한 날짜`, `commit 메시지`를 보여준다.
 <br><br>
 `-p`옵션은 각 commit의 diff 결과를 보여준다. 만약 여기에 `-2`를 추가하면 최근 두 개의 결과만 보여준다.
-<br><br>
-`--oneline`은 각 commit을 한 라인으로 보여준다.
+<br>
+`--oneline`옵션은 각 commit하나를 한 줄로 보여준다.<br>
+`--graph`옵션은 그래프 형태로 commit을 보여준다.<br>
+`--all`옵션은 모든 commit을 보여준다.<br>
