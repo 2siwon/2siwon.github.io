@@ -7,9 +7,9 @@ categories: Git
 ### 브랜치란?
 
 Git은 데이터를 일련의 `snapshot`으로 기록한다.
-`commit`을 하면 `Git`은 현 `Staging area`에 있는 데이터의 스냅샷에 대한 포인터, 저자나 커밋 메시지 같은 메타데이터, 이전 커밋에 대한 포인터 등을 포함하는 커밋 개체(object)를 저장한다. 포인터로 이전 커밋을 가리키기 때문에 현재 커밋의 기준을 알 수 있다.
-
-<hr><br><br>
+`commit`을 하면 `Git`은 현 `Staging area`에 있는 데이터의 스냅샷에 대한 포인터, 저자나 커밋 메시지 같은 메타데이터, 이전 커밋에 대한 포인터 등을 포함하는 커밋 개체(object)를 저장한다. 포인터로 이전 커밋을 가리키기 때문에 현재 커밋의 기준을 알 수 있다. <br>
+<hr>
+<br>
 
 
 #### 저장소의 커밋 데이터 구조
@@ -76,4 +76,5 @@ $ git commit -a -m 'made other changes'
 
 1. 위 작업 전`master branch`가 가리키고 있던 `commit`이 `이전 commit`이 된다. <br>
 2. 그리고 `master branch`는 `commit`한 새로운 `commit`을 가리키게 된다.<br><br>
+
 이렇게되면 `master branch`와 `testing branch`는 `같은 부모 commit`을 가지게 되므로 각각 `독립적인 working directory`가 생성된다.<br><br>
