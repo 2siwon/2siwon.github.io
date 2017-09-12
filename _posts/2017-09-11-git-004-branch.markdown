@@ -8,5 +8,5 @@ categories: Git
 
 `git commit`을 하면 `commit`의 `루트 디렉토리 객체`가 만들어진다. 이 `루트 디렉토리 객체`는 `staged` 상태에서 `git commit`으로 `commit된 시점의 각 파일들의 객체`들을 담고있는 `tree 객체`를 가리키는 포인터 정보를  `commit 객체(루트 디렉토리 개체)`에 넣어 저장한다.
 
-<img src="./images/003-branch/00.branch.png" alt="00.branch">
+<img src="./images/003-branch/00.branch.png">
 ![Alt text](./images/003-branch/00.branch.png)
