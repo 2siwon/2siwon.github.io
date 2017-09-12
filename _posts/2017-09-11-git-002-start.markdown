@@ -10,6 +10,7 @@ categories: Git
 
 ### 세 가지 상태
 
+
 Git은 파일을 ```Committed```, ```Modified```, ```Staged``` 이렇게 세 가지 상태로 관리한다.
 <h5>Committed</h5>
 데이터가 로컬 데이터베이스에 안전하게 저장됐다는 것을 의미한다.
@@ -17,12 +18,12 @@ Git은 파일을 ```Committed```, ```Modified```, ```Staged``` 이렇게 세 가
 수정된 파일이 아직 staged 상태로 올라가지 않은 상태를 말한다.
 <h5>Staged</h5>
 현재 수정한 파일을 곧 커밋할 것이라고 표시한 상태를 의미한다.
-
+<hr><br><br>
 ### 파일의 구분
 
 `Git`은 또한 모든 파일을 `Tracted(관리대상)`와 `Untracted(관리대상 아님)`로 나눌 수 있다.
 `Untracted` 파일은 워킹 디렉토리에 있는 파일 중 `snapshot`에도 `Staging Area`에도 포함되지 않는 파일이다.
-
+<hr><br><br>
 
 
 ### 기본 명령어
@@ -44,7 +45,7 @@ nothing added to commit but untracted files present (use "git add" to track)
 
 
 Untracted files에 README.md 파일이 추가되어 있는 걸 볼 수 있다.
-
+<hr><br><br>
 #### add(파일을 새로 추적하기)
 `git add`는 `untracted` 파일을 `tracted` 파일로 바꿔주며 staged 상태가 된다. 앞에서 만든 README.md 파일을 add 해보자.
 
@@ -76,9 +77,12 @@ $ git commit
 
 이 명령어를 입력하면 편집 프로그램(vi, nano..)이 실행되어 해당 `commit`의 제목과 내용을 입력 할 수 있다. 또한 `-a` 옵션을 사용하면 `untracted` 상태의 파일을 자동으로 `add`하여 `staging area`에 넣는다.<br><br>
 `--amend`옵션은 너무 일찍 commit했거나 어떤 파일을 누락했을 때 그리고 commit 메시지를 잘못 적었을 때 한다.
+
 ```
 $ git commit --amend
 ```
+
+<hr><br><br>
 
 #### diff(Staged와 Unstaged 상태의 변경 내용보기)
 `git diff` 명령을 실행하면 `staged` 된 파일과 수정 후 아직 `staged` 상태가 아닌 파일을 비교해 볼 수 있다. `staged` 상태인 파일은 `git diff --cached` 또는 `git diff --staged` 옵션으로 확인한다.
