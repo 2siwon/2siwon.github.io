@@ -9,7 +9,7 @@ categories: Git
 
 `Git` 저장소를 만드는 방법은 두 가지다. `기존 프로젝트나 디렉토리`를 `Git 저장소`로 만드는 방법과 다른 서버에 있는 `저장소`를 `Clone`하는 방법이 있다.
 
-#####기존 디렉토리를 Git 저장소로 만들기
+##### 기존 디렉토리를 Git 저장소로 만들기
 원하는 프로젝트의 디렉토리로 이동한다.
 
 ```
@@ -30,7 +30,7 @@ $ git clone https://github.com/2siwon/2siwon
 
 아래 명령어는 디렉토리 이름이 mylibgit 이라는 것만 제외하면 앞에 사용한 명령어와 동일하다.
 ```
-git clone https://github.com/2siwon/2siwon mylibgit
+$ git clone https://github.com/2siwon/2siwon mylibgit
 ```
 
 <br>
@@ -43,7 +43,7 @@ git clone https://github.com/2siwon/2siwon mylibgit
 `git remote` 명령으로 현재 프로젝트에 등록된 저장소를 확인 할 수 있다. 보통 저장소를 clone 하게 될 경우 origin이라는 이름으로 등록된다.
 
 ```
-$git clone git://github.com/2siwon/Git-practice.git
+$ git clone git://github.com/2siwon/Git-practice.git
 ```
 `-v` 옵션은 단축이름과 URL을 볼 수 있다. 또한 다른 사람의 Contributions를 쉽게 가져올 수 있다.
 
