@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git : Branch 와 Merge"
+title:  "Git : 05. Branch 와 Merge"
 date:   2017-09-13 15:10:41 +0900
 categories: Git
 ---

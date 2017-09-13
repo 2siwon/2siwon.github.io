@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git : 기초"
+title:  "Git : 03. 기초"
 date:   2017-09-12 15:10:41 +0900
 categories: Git
 ---

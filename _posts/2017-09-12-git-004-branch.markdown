@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git : Branch란?"
+title:  "Git : 04. Branch란?"
 date:   2017-09-12 15:10:41 +0900
 categories: Git
 ---
