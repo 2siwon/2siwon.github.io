@@ -7,8 +7,6 @@ categories: Git
 
 
 
-
-
 ###### Mac을 기준으로 작성된 포스팅입니다.
 ### Branch 와 Merge
 
@@ -18,7 +16,7 @@ categories: Git
 2. `새로운 이슈(issue53)`를 처리할 `issue53 Branch`를 하나 생성한다.
 3. `issue53 Branch`에서 `작업을 진행`한다.
 
-> 이때 중요한 문제가 생겨서 그것을 해결하는 `Hotfix`를 먼저 만들어야 한다. 그러면 아래와 같이 할 수 있다.
+> 이때 중요한 문제가 생겨서 그것을 해결하는 `Hotfix branch`를 먼저 만들어야 한다. 그러면 아래와 같이 할 수 있다.
 
 1. 새로운 이슈를 처리하기 위해 `이전의 운영(production, master) branch`로 `이동`한다.
 2. `hotfix branch`를 새로 하나 `생성`한다.
@@ -172,5 +170,3 @@ $ git branch -d issue53
 ```
 
 <br><br><br>
-
-### Conflict
