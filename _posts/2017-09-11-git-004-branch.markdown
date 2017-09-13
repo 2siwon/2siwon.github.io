@@ -5,6 +5,8 @@ date:   2017-09-12 15:10:41 +0900
 categories: Git
 ---
 
+
+
 ###### Mac을 기준으로 작성된 포스팅입니다.
 ### Branch란?
 
@@ -20,7 +22,7 @@ Git은 데이터를 일련의 `snapshot`으로 기록한다.
 
 ![00.branch](https://git-scm.com/book/en/v2/images/commit-and-tree.png)
 
-<br><br>
+<br><br><br>
 
 #### Git commit의 개체 데이터
 다시 파일을 수정하고 `commit`하면 `이전 commit`이 무엇인지도 저장한다. 이후 `commit한 개체`는 `이전 commit 개체`를 가리키고 있다.
@@ -37,7 +39,7 @@ Git은 데이터를 일련의 `snapshot`으로 기록한다.
 ![02.branch](https://git-scm.com/book/en/v2/images/branch-and-history.png)
 
 
-<br><br>
+<br><br><br>
 
 
 #### commit 개체를 가리키는 두 branch
@@ -52,7 +54,7 @@ $ git branch testing
 ![03.branch](https://git-scm.com/book/en/v2/images/two-branches.png)
 
 
-<br><br>
+<br><br><br>
 
 #### HEAD는 현재 작업 중인 branch를 가리킨다.
 
@@ -70,7 +72,16 @@ $ git checkout testing
 ![04.branch](https://git-scm.com/book/en/v2/images/head-to-master.png)
 
 
-<br><br>
+<br><br><br>
+
+#### 브랜치 이동하기
+현재 HEAD는 `master branch`를 가리키고 있다. 이 전 명령에서 생성한 `testing branch`를 가리키게 해보자.
+
+```
+$ git checkout testing
+```
+
+![05.branch](https://git-scm.com/book/en/v2/images/head-to-testing.png)
 
 #### 새로운 파일을 만들어서 commit을 해보자.
 
@@ -80,9 +91,9 @@ $ git commit -a -m 'made a change'
 ```
 git commit -a -m 'made a change'는 `add`와 `commit`을 동시에하고 `commit의 title message`까지 적어준다는 의미이다. 이렇게되면 `HEAD`가 가리키고 있는(checkout 하고있는) `testing branch`은  앞으로 이동하여`현재 commit이` 되고 `master branch`는 `이전 commit`이 된다.
 
+![06.branch](https://git-scm.com/book/en/v2/images/advance-testing.png)
 
-
-<br><br>
+<br><br><br>
 
 #### 다시 master branch로 HEAD를 옮겨보자.
 
@@ -94,11 +105,16 @@ $ git checkout master
 1. `master branch`가 가리키는 `commit`을 `HEAD`가 가리키게 했다.<br>
 2. `working directory의 files`도 그 `시점`으로 되돌려 놓았다.<br>
 
+![07.branch](https://git-scm.com/book/en/v2/images/checkout-master.png)
+
 ```
 HEAD -> master branch
 ```
 
-이렇게 `HEAD`가 `master branch`를 가리키는 시점에서 다시 `files를 수정`하고 `commit`해보자.
+<br><br><br>
+
+
+#### HEAD가 master branch를 가리키는 시점에서 다시 files를 수정하고 commit해보자.
 
 ```
 $ vi test.rb
@@ -109,3 +125,5 @@ $ git commit -a -m 'made other changes'
 2. 그리고 `master branch`는 `commit`한 새로운 `commit`을 가리키게 된다.<br><br>
 
 이렇게되면 `master branch`와 `testing branch`는 `같은 부모 commit`을 가지게 되므로 각각 `독립적인 working directory`가 생성된다.
+
+![08.branch](https://git-scm.com/book/en/v2/images/advance-master.png)
