@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git : 07. Branch 관리"
+title:  "Git : 07. Branch Menagement"
 date:   2017-09-13 15:10:41 +0900
 categories: Git
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git : 08. Remote branch"
+title:  "Git : 08. Remote Branchs"
 date:   2017-09-14 15:10:41 +0900
 categories: Git
 ---
