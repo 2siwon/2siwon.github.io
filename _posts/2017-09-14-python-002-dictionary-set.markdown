@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Python : 01. Dictionary and Set"
+title:  "Python : 02. Dictionary and Set"
 date:   2017-09-14 15:10:41 +0900
 categories: Python
 ---
