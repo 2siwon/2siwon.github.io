@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Git : 08. Remote branch"
-date:   2017-09-13 15:10:41 +0900
+date:   2017-09-14 15:10:41 +0900
 categories: Git
 ---
 ###### OSX를 기준으로 작성된 포스팅입니다.
