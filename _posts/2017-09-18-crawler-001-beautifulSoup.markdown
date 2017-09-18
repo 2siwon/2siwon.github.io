@@ -14,6 +14,7 @@ categories: Crawler
 BeautifulSoup은 웹 크롤링을 위한 파이썬 라이브러리 중 하나이다. 설치 및 사용방법을 알아보자. 설치는 pip를 이용 할 것이다.
 
 <br>
+
 ### beaultifulsoup4 설치
 
 ```
@@ -21,6 +22,7 @@ $ pip install beautifulsoup4
 ```
 
 <br>
+
 ### 파서(parser) 설치
 
 ```
@@ -28,6 +30,7 @@ $ pip install lxml
 ```
 
 <br>
+
 ### soup 만들기
 라이브러리를 import 해준다.
 
