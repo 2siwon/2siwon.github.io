@@ -16,7 +16,7 @@ for 항목 in 순회가능(iterable)객체 :
 	<항목을 사용한 코드>
 ```
 
-iterablr한 객체에는 String, Tuple, Dictionary, Set 등이 있다.
+iterable한 객체에는 String, Tuple, Dictionary, Set 등이 있다.
 
 ```
 >>> champion_list = ['lux', 'ahri', 'ezreal', 'zed']
