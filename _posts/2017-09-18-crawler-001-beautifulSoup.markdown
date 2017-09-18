@@ -15,12 +15,14 @@ BeautifulSoup은 웹 크롤링을 위한 파이썬 라이브러리 중 하나이
 
 <br>
 ### beaultifulsoup4 설치
+
 ```
 $ pip install beautifulsoup4
 ```
 
 <br>
 ### 파서(parser) 설치
+
 ```
 $ pip install lxml
 ```
