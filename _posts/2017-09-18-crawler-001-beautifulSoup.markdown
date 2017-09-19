@@ -11,7 +11,7 @@ categories: Crawler
 
 ### BeautifulSoup를 이용하여 네이버 웹툰 타이틀 가져오기  
 
-BeautifulSoup은 웹 크롤링을 위한 파이썬 라이브러리 중 하나이다. 설치 및 사용방법을 알아보자. 설치는 pip를 이용 할 것이다.
+BeautifulSoup은 웹 크롤링을 위한 파이썬 라이브러리 중 하나이다. 설치 및 사용방법을 알아보자. 설치는 pip를 이용한다.
 
 <br>
 
@@ -62,5 +62,5 @@ from bs4 import BeautifulSoup
  16     print(i)
 ```
 1. sample.txt 파일을 읽어 soup객체를 만든다.
-2. 모든 td 와 title 태그를 list형태로 pkg_list에 저장한다.
+2. 모든 td 태그의 title 클래스를 list형태로 pkg_list에 저장한다.
 3. 제목이 속해 있는 a태그의 text를 title_list에 하나씩 append 해준다.
