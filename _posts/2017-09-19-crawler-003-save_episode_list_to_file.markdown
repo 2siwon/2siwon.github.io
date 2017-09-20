@@ -34,7 +34,7 @@ def save_episode_list_to_file(webtoon_id, episode_list):
 save_episode_list_to_file(webtoon_yumi, episode_list)
 ```
 
-'|'로 각 episode의 index를 나눠서 써준다. 하나의 episode가 끝나면 '\n'개행 한다.
+'\|'로 각 episode의 index를 나눠서 써준다. 하나의 episode가 끝나면 '\n'개행 한다.
 
 
 <br><br>
@@ -55,5 +55,5 @@ def load_episode_list_from_file(path):
 2. 다시 episode_list를 만들기 위한 list객체를 초기화한다.
 3. 한 줄 읽을 때마다 episode_list에 한 줄에 대한 정보를 넣는다.
 4. 한 줄에 대한 정보는 colledctions.namedtuple에 메서드인 \_make()를 이용한다. (\_make()는 기존에 생성된 namedtuple(class라고 생각하면 쉽다.)에 새로운 인스턴스를 생성하는 메소드이다.
-5. String객체인 line 메소드인 strip()으로 양 쪽 공백을 없애고  '|'로 나누어 다시 저장한다.
+5. String객체인 line 메소드인 strip()으로 양 쪽 공백을 없애고  '\|'로 나누어 다시 저장한다.
 6. 다시 load한 episode_list를 리턴한다.
