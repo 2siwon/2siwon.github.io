@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Python : 04. 파일입출력"
+title:  "Python : 05. 파일입출력"
 date:   2017-09-14 15:10:41 +0900
 categories: Python
 ---
