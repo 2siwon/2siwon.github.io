@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Crawler : 02. 네이버 웹툰 크롤러 만들기(2)"
+title:  "Crawler : 03. 네이버 웹툰 크롤러 만들기(2)"
 date:   2017-09-19 15:10:41 +0900
 categories: Crawler
 ---
