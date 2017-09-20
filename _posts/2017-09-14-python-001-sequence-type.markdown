@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Python : 01. Sequence type"
+title:  "Python : 01. 시퀀스 타입"
 date:   2017-09-14 15:10:41 +0900
 categories: Python
 ---

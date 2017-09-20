@@ -1,0 +1,252 @@
+---
+layout: post
+title:  "Python : 05. 클래스(class)"
+date:   2017-09-15 15:10:41 +0900
+categories: Python
+---
+
+## 클래스 변수
+
+```
+class Service:
+	count = 0
+```
+클래스를 정의할 때 메서드 밖에 존재하는 변수. 해당 클래스를 사용하는 모두에게 공용으로 사용된다.<br>
+**"클래스명.변수명"** "Service.count"로 접근 가능하다.
+
+<br><br>
+
+## 인스턴스 변수
+
+```
+class Service:
+	count = 0 # 클래스 변수
+
+ 	# 초기자(Initializer)
+ 	def __init__(self, name):
+ 		self.name = name
+
+
+kim = Service('이시원')
+```
+
+각 인스턴스별로 서로 다른 값을 갖는 변수. <br>
+내부에서는 **self.변수명** "self.name"과 같이 "self."를 사용해 접근하고, <br>
+외부에서는 **"객체변수.인스턴스변수"** "kim.name"과 같이 접근 가능하다.
+
+<br><br>
+
+## 접근 지정자
+엄밀히 말하면 파이썬은 접근 지정자(publicm, protected, privarte)가 없다. **그러므로 python 클래스는 기본적으로 모든 멤버가 public이라고 할 수 있다.** python 코딩 관례상 내부적으로 사용하는 변수 혹은 메서드는 언더스코어 하나(_)를 붙인다. 특정 변수 혹은 메서드를 private으로 만들어야 한다면 언더스코어 두개(\_\_)를 붙인다.
+
+```
+def __init__(self, width, height):
+	self.width = width
+	self.height = height
+
+	# private 변수 __area
+	self.__area = width * height
+
+# private 메서드
+def __internalRun(self):
+	pass
+```
+
+<br><br>
+
+## 초기자(Initializer)
+
+Java/C++/C# 등의 생성자(Constructor)와는 다르다. Python의 클래스 생성자는 런타임 엔진 내부에서 실행되는데, 이 생성자 실행 도중 클래스 안에 생성자(Initializer)가 있는지 체크하여 만약 있으면 호출하고 객체의 변수 등을 초기화한다.
+
+\_\_init__ 메소드는 **"객체를 만들 때 항상 실행된다"** 고 생각하면 된다.
+<br>
+setname이라는 메소드와 sum이라는 메소드가 있다고 생각해보자.
+
+```
+class Service:
+	def setname(self, name):
+		self.name = name
+
+	def sum(self, a, b):
+		print('{}님 결과값은 {}입니다.'.format(self.name, a+b))
+```
+
+그리고 kim이라는 이름의 객체를 생성해보자.
+
+```
+kim = Service()
+```
+
+이렇게 Service 클래스의 인스턴스를 생성했다. 하지만 만약 sum메소드가 name값을 필요로 한다면 어떻게될까?
+
+```
+>>> kim = Service()
+>>> kim.sum(1, 1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 7, in sum
+AttributeError: 'Service' object has no attribute 'name'
+```
+
+에러가 나게된다. 그럼 어떻게 해야할까? \_\_init__ 메소드를 사용하여 해결 할 수 있다. 방법은 간단하다 메소드명을 setname으로 바꿔주면 된다.
+
+```
+class Service:
+	def __init__(self, name):
+		self.name = name
+
+	def sum(self, a, b):
+		print('{}님 결과값은 {}입니다.'.format(self.name, a+b))
+```
+
+이렇게 \_\_init__메소드를 사용하면 특정 클래스의 인스턴스를 생성할 때 필요한 초기값을 넣도록 할 수 있다.
+
+<br><br>
+
+## 인스턴스(Instance) 메서드
+
+가장 흔히 쓰이는 메서드이다. 인스턴스 변수에 접근 가능하도록 첫번째 파라미터로 항상 **"self"** 를 갖는다. self는 객체 인스턴스를 의미한다.
+
+```
+class Service:
+	def __init__(self, name):
+		self.name = name
+
+	def sum(self, a, b):
+		print('{}님 결과값은 {}입니다.'.format(self.name, a+b))
+```
+
+위 코드의 모든 메서드들이 **인스턴스(instance) 메서드** 이다.
+
+<br><br>
+
+### 객체와 인스턴스의 차이
+
+클래스에 의해서 만들어진 객체를 인스턴스라고도 한다. 그렇다면 객체와 인스턴스의 차이는 무엇일까? 이렇게 생각해 보자. kim = Programmer() 이렇게 만들어진 kim은 객체이다. 그리고 kim이라는 객체는 Programmer의 인스턴스이다. 즉, 인스턴스라는 말은 특정 객체(kim)가 어떤 클래스(Programmer)의 객체인지를 관계 위주로 설명할 때 사용된다. 즉, "kim은 인스턴스" 보다는 "kim은 객체"라는 표현이 어울리며, "kim은 Programmer의 객체" 보다는 "kim은 Programmer의 인스턴스"라는 표현이 훨씬 잘 어울린다.
+
+<br><br>
+
+### self를 사용하는 이유
+
+
+![Why use self in class](https://wikidocs.net/images/page/28/pey_sum.png)
+
+
+위 그림처럼 **"파이썬은 객체를 통해 클래스의 함수를 호출할 때 호출한 객체 자신이 호출한 클래스 함수의 첫번째 입력 인수로 전달된다."**
+
+<br><br>
+
+#### 객체를 이용한 호출
+
+Service 클래스에 sum이라는 메소드가 있다고 하고 service 클래스의 인스턴스 pey를 생성해보자.
+
+```
+pey = Service()
+
+```
+
+그리고 생성한 객체 pey를 이용해 sum 메소드를 호출해보자.
+
+```
+pey.sum(1,2)
+```
+
+<br><br>
+
+#### 클래스를 이용한 호출
+
+```
+pey = Service()
+Service.sum(pey, 1, 2)
+```
+
+객체를 통한 호출이 아니므로 sum함수에는 pey객체가 자동으로 전달되지 않는다. 따라서 클래스를 통해 sum함수를 호출 할 때는 위의 예와 같이 **총 3개의 입력** 을 모두 넘겨주어야만 한다.
+<br><br>
+두 가지의 결과는 같지만 클래스를 이용한 호출은 특별한 경우가 아니면 잘 사용하지 않는다.
+<br><br>
+
+
+
+## 정적(static) 메서드
+
+인스턴스 메서드는 self를 통해 인스턴스 필드에 접근 할 수 있다. **정적 메서드**는 self 파라미터를 갖지 않고 인스턴스 변수에 접근할 수 없다. 따라서, 객체 필드와 독립적이지만 로직상 클래스내에 포함되는 메서드에 사용된다. 메서드 앞에 **@staticmethod** 라는 **Decorator** 를 표시한다.
+
+```
+import random
+
+class Champion:
+	def __init__(self, name, champion_type):
+	self.name = name
+	self.champion_type = champion_type
+
+	@staticmethod
+	def magician():
+		champions = ('Lux', 'Ahri', 'Xerath')
+		selected_champion = random.choice(champions)
+		return Champion(selected_champion, 'Magician')
+```
+
+<br><br>
+
+## 클래스(class) 메서드
+
+정적 메서드와 비슷하다. 하지만 정적 메서드와는 다르게 클래스를 의미하는 파라미터인 **cls** 를 받는다. 인스턴스 메서드가 객체를 의미하는 self를 받는 것과도 다르다.
+
+```
+
+```
+
+<br><br>
+
+## 데코레이터(decorator)
+
+> http://jonnung.github.io/python/2015/08/17/python-decorator/
+
+
+<br><br>
+
+## get/set속성과 프로퍼티
+
+파이썬에서는 지원하지 않지만, 어떤 언어들은 외부에서 접근할 수 없는 private객체 속성을 지원한다. 이 경우, 객체에서는 해당 속성을 읽고 쓰기 위해 getter, setter메서드를 사용해야 한다.
+
+파이썬에서는 해당 기능을 프로퍼티(property)를 사용해 간편히 구현한다.
+
+```
+@property
+def name(self):
+    return self.__name
+
+@name.setter
+def name(self, new_name):
+    self.__name = new_name
+    print('Set new name ({})'.format(self.__name))
+```
+
+setter프로퍼티를 명시하지 않으면 읽기전용이 되어 외부에서 조작할 수 없게 된다.
+
+<br><br>
+
+## 상속(Inheritance)
+
+```
+class Restaurant(Shop):
+    pass
+```
+
+상속받은 클래스는 부모 클래스의 모든 속성과 메서드를 사용할 수 있다.
+
+
+### 메서드 오버라이드
+
+상속받은 클래스에서, 부모 클래스의 메서드와는 다른 동작을 하도록 할 수 있다. 이 경우 부모 클래스의 메서드를 덮어씌워서 사용하도록 하며, 이 방법을 메서드 오버라이드(method override)라고 한다.
+
+### 부모 클래스의 메서드를 호출 (super)
+
+```
+class Restaurant(Shop):
+    def __init__(self, name, shop_type, address, rating):
+        super().__init__(name, shop_type, address)
+        self.rating = rating
+```
+
+위 코드의 경우, super()메서드를 사용해서 부모의 \_\_init__ 메서드를 호출한다.
