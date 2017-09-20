@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Python : 02. 딕셔너리, 셋"
-date:   2017-09-14 15:10:41 +0900
+date:   2017-09-15 15:10:41 +0900
 categories: Python
 ---
 
