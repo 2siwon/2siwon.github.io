@@ -6,7 +6,7 @@ categories: Crawler
 ---
 
 ### 네이버 웹툰 크롤러 만들기(2)까지 작성한 코드는 utils 모듈로 리팩토링. 이하 코드는 utils를 import하여 작성.
-
+#### crawler2.py
 
 ```
 import os
