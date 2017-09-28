@@ -13,6 +13,7 @@ categories: Django
 4. pyenv virtualenv 3.6.2 [이름] - 가상환경생성
 5. pyenv local [이름] - 생성한 가상환경 디렉토리에 설정
 6. pip install django
-7. pycharm에서 django-admin startproject [프로젝트 이름]
-8. config로 디렉토리 이름 refactor(적용 안될 시 pycharm 재시작)
-9. settings.py -> INSTALLED_APPS에서 [프로젝트 이름]추가
+7. git freeze > requirements.txt 파일 생성
+8. pycharm에서 django-admin startproject [프로젝트 이름]
+9. config로 디렉토리 이름 refactor(적용 안될 시 pycharm 재시작)
+10. settings.py -> INSTALLED_APPS에서 [프로젝트 이름]추가
