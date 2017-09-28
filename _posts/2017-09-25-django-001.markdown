@@ -37,17 +37,21 @@ projects/
 
 ## 새 프로젝트 구성
 
-1. djangogirls폴더 생성
+1. 프로젝트 디렉토리 생성
 2. git init
-3. gitignore작성(python, pycharm, macOS, django)<br>
- 3-1. gitignore내부에 .idea/ 추가
-4. pyenv virtualenv fc-djangogirls생성
-5. pyenv local로 적용할 가상환경 설정
-6. GitHub에 Djangogirls저장소 추가
-7. 로컬 git에 GitHub remote저장소 추가
-8. PyCharm으로 해당 프로젝트 폴더 open후 interpreter설정
+3. .gitignore 파일 생성(python, pycharm, macOS, django) -> .idea/ 추가
+4. pyenv virtualenv 3.6.2 [이름] - 가상환경생성
+5. pyenv local [이름] - 생성한 가상환경 디렉토리에 설정
+6. pip install django
+7. GitHub에 [이름]저장소 추가
+8. git freeze > requirements.txt 파일 생성
+9. 로컬 git에 GitHub remote저장소 추가
+10. pycharm에서 django-admin startproject [프로젝트 이름]
+11. config로 디렉토리 이름 refactor(적용 안될 시 pycharm 재시작)
+12. settings.py -> INSTALLED_APPS에서 [프로젝트 이름]추가
+13. PyCharm으로 해당 프로젝트 폴더 open후 interpreter설정
   macOS: /usr/local/var/pyenv/versions/
-  Linux: $HOME/.pyenv/versions
+
 
 
 
