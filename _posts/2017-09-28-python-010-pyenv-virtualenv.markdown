@@ -26,8 +26,8 @@ $ brew install pyenv-virtualenv
 - 프로젝트 디렉토리에서 아래 명령을 실행하면, .python-version 파일이 생성되면서 프로젝트의 파이썬 버전을 정의할 수 있다.
 
 ```
-$ pyenv local 2.7.10
-$ pyenv virtualenv 2.7.10 venv
+$ pyenv local 3.6.2
+$ pyenv virtualenv 3.6.2 venv
 ```
 
 <br><br>
@@ -37,7 +37,7 @@ $ pyenv virtualenv 2.7.10 venv
 - 가상환경 생성 Python 버전 지정
 
 ```
-$ pyenv virtualenv 2.7.7 [이름]
+$ pyenv virtualenv 3.6.2 [이름]
 (가상환경은 프로젝트 디렉토리가 아니라 pyenv 버전 하위에 생성되는 것에 주의한다.)
 ```
 
