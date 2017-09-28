@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Python : 10. virtualenv로 가상환경 설치하기"
-date:   2017-09-28 15:10:41 +0900
+date:   2017-09-17 15:10:41 +0900
 categories: Python
 ---
 
