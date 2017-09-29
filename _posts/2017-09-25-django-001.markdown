@@ -56,8 +56,6 @@ projects/
 
 
 
-## MTV모델
-
 ### MVC pattern
 
 Model-View-Controller pattern
