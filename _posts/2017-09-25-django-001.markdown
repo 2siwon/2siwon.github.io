@@ -5,7 +5,7 @@ date:   2017-09-25 15:10:41 +0900
 categories: Django
 ---
 
-# Djangogirls Tutorial
+
 
 ## requirements
 
