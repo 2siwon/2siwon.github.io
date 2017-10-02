@@ -7,7 +7,7 @@ highlighter: rouge
 markdown: kramdown
 disqus: dbyll
 google_analytics: dbyll
-title: dbyll
+title: 2siwon
 
 defaults:
   -
@@ -18,13 +18,13 @@ defaults:
 
 description: Stylish Jekyll Theme
 author:
-  name: dbyll
-  email: dbyll@ismaildemirbilek.com
-  github: dbtek
-  twitter: dbtek
-  pinterest: asd123
-  linkedin: asd123
-  bio: Your stylish, minimalist theme!
+  name: siwon
+  email: lee89640245@gmail.com
+  github: 2siwon
+  # twitter: dbtek
+  # pinterest: asd123
+  # linkedin: asd123
+  bio: $_$
   email_md5: 726351295ec82e145928582f595aa3aa
 
 rss_path: feed.xml
