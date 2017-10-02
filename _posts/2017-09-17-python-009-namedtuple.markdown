@@ -6,9 +6,7 @@ categories: Python
 ---
 
 
-## Namedtuple
-
-namedtuple은 클래스를 명시할 때 인스턴스 변수만 있는 것 처럼 사용할 수 있는 tuple이다.<br>
+namedtuple은 클래스를 명시할 때 인스턴스 변수만 있는 것 처럼 사용할 수 있는 tuple이다.
 namedtuple을 사용하면 튜플에서 각 위치의 의미를 명시적으로 작성할 수 있다.
 
 

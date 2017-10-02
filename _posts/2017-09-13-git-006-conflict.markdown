@@ -6,11 +6,8 @@ categories: Git
 ---
 
 
-###### OSX 기준으로 작성된 포스팅입니다.
 
-### Conflict
-
-> 가끔씩 3-way Merge가 실패할 때도 있다. Merge 하는 두 branch에서 같은 파일의 한 부분을 동시에 수정하고 Merge 하면 Git은 해당 부분을 Merge 하지 못한다. 예를 들어, 53번 이슈와 hotfix가 같은 부분을 수정했다면 Git은 Merge 하지 못하고 아래와 같은 `충돌(Conflict)` 메시지를 출력한다.
+가끔씩 3-way Merge가 실패할 때도 있다. Merge 하는 두 branch에서 같은 파일의 한 부분을 동시에 수정하고 Merge 하면 Git은 해당 부분을 Merge 하지 못한다. 예를 들어, 53번 이슈와 hotfix가 같은 부분을 수정했다면 Git은 Merge 하지 못하고 아래와 같은 `충돌(Conflict)` 메시지를 출력한다.
 
 ```
 $ git merge iss53

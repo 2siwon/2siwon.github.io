@@ -5,6 +5,8 @@ date:   2017-09-19 15:10:41 +0900
 categories: Crawler
 ---
 
+크롤링을 위해 필요한 라이브러리(Requests, BeautifulSoup4, urllib.parse)들과 특정 웹툰의 id값과 page값으로 에피소드 리스트를 크롤링해보자. 
+
 ## 크롤링을 위해 필요한 라이브러리
 
 ### Requests

@@ -5,13 +5,13 @@ date:   2017-09-18 15:10:41 +0900
 categories: Crawler
 ---
 
+
+BeautifulSoup은 웹 크롤링을 위한 파이썬 라이브러리 중 하나이다. 설치 및 사용방법을 알아보자. 설치는 pip를 이용한다.<br><br>
+
 ## Crawler
 
 >공식문서  - https://cryptosan.github.io/pythondocuments/documents/beautifulsoup4/
 
-### BeautifulSoup를 이용하여 네이버 웹툰 타이틀 가져오기  
-
-BeautifulSoup은 웹 크롤링을 위한 파이썬 라이브러리 중 하나이다. 설치 및 사용방법을 알아보자. 설치는 pip를 이용한다.
 
 <br>
 

@@ -4,11 +4,8 @@ title:  "Git : 08. Remote Branchs"
 date:   2017-09-14 15:10:41 +0900
 categories: Git
 ---
-###### OSX를 기준으로 작성된 포스팅입니다.
-### Remote branch
-<hr><br>
 
-> 리모트 Refs는 리모트 저장소에 있는 포인터인 레퍼런스다. 리모트 Ref가 있지만 보통은 remote tracking branch를 사용한다.
+리모트 Refs는 리모트 저장소에 있는 포인터인 레퍼런스다. 리모트 Ref가 있지만 보통은 remote tracking branch를 사용한다.
 
 #### remote tracking branch
 `remote tracking branch`는 remote branch를 추적하는 브랜치이다. 이 브랜치는 로컬에 있지만 움직일 수 없다. `remote server`에 연결될 때마다 `remote branch`에 따라서 자동으로 움직일 뿐이다. <br>

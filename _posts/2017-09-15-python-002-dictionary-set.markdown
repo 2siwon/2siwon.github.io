@@ -5,7 +5,7 @@ date:   2017-09-15 15:10:41 +0900
 categories: Python
 ---
 
-## 딕셔너리(dictionary)
+
 Key-Value 형태로 항목을 가지는 자료구조.
 
 #### 딕셔너리 생성
