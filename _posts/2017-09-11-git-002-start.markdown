@@ -1,0 +1,138 @@
+---
+layout: post
+title:  "Git : 02. 시작하기"
+date:   2017-09-11 15:10:41 +0900
+categories: Git
+---
+
+
+
+
+
+
+
+###### OSX를  기준으로 작성된 포스팅입니다.
+### 세 가지 상태
+<hr>
+
+
+Git은 파일을 ```Committed```, ```Modified```, ```Staged``` 이렇게 세 가지 상태로 관리한다.
+<h5>Committed</h5>
+데이터가 로컬 데이터베이스에 안전하게 저장됐다는 것을 의미한다.
+<h5>Modified</h5>
+수정된 파일이 아직 staged 상태로 올라가지 않은 상태를 말한다.
+<h5>Staged</h5>
+현재 수정한 파일을 곧 커밋할 것이라고 표시한 상태를 의미한다.
+<br><br>
+
+### 파일의 구분
+<hr>
+
+`Git`은 또한 모든 파일을 `Tracted(관리대상)`와 `Untracted(관리대상 아님)`로 나눌 수 있다.
+`Untracted` 파일은 워킹 디렉토리에 있는 파일 중 `snapshot`에도 `Staging Area`에도 포함되지 않는 파일이다.
+<br><br>
+
+### 기본 명령어
+<hr>
+
+#### status(파일의 상태 확인하기)
+`git status`는 현재 파일들의 상태들을 보여준다. `untracted files`는 초록색 `tracted fils`는 빨간색으로 나타내주며 확인을 자주하기 때문에 가장 많이 쓰이는 명령어 중 하나이다.
+README.md 파일을 생성한 직후  status 명령어를 실행해보자.
+
+```
+$ echo 'My Project' > README.md
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracted files:
+	(use "git add <file>..." to include in what will be committed)
+	**README.md**
+nothing added to commit but untracted files present (use "git add" to track)
+```
+
+
+Untracted files에 README.md 파일이 추가되어 있는 걸 볼 수 있다.
+<br><br>
+
+#### add(파일을 새로 추적하기)
+`git add`는 `untracted` 파일을 `tracted` 파일로 바꿔주며 staged 상태가 된다. 앞에서 만든 README.md 파일을 add 해보자.
+
+```
+$ git add README.md
+```
+
+그리고 다시 `status` 명령어를 사용하면
+
+```
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+	**new file:   README.md**
+```
+
+`add -A`모든 `untracted files`를 `add`하기 위해선 아래 `-A` 옵션을 사용한다.
+
+```
+$ git add -A
+```
+
+#### commit(변경사항 커밋하기)
+
+`git commit`은 `staged` 상태에 있는 파일들을 로컬 데이터베이스에 그 시점의 `snapshot`이 저장된다.
+
+```
+$ git commit
+```
+
+이 명령어를 입력하면 편집 프로그램(vi, nano..)이 실행되어 해당 `commit`의 제목과 내용을 입력 할 수 있다. 또한 `-a` 옵션을 사용하면 `untracted` 상태의 파일을 자동으로 `add`하여 `staging area`에 넣는다.<br><br>
+`--amend`옵션은 너무 일찍 commit했거나 어떤 파일을 누락했을 때 그리고 commit 메시지를 잘못 적었을 때 한다.
+
+```
+$ git commit --amend
+```
+
+
+#### diff(Staged와 Unstaged 상태의 변경 내용보기)
+`git diff` 명령을 실행하면 `staged` 된 파일과 수정 후 아직 `staged` 상태가 아닌 파일을 비교해 볼 수 있다. `staged` 상태인 파일은 `git diff --cached` 또는 `git diff --staged` 옵션으로 확인한다.
+
+```
+$ git diff
+```
+
+ex) `.gitignore` 파일은 `staged` 상태이고 내용은 `*.DS_Store`라고 해보자. 이 파일에 `.AppleDouble` 이라는 내용을 한 줄 추가하고 저장 후 `git diff`를 한다.
+
+```
+diff --git a/.gitignore b/.gitignore
+index 56266d3..4313710 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,2 @@
+-*.DS_Store
++.AppleDouble
+```
+
+#### push
+```
+$ git push -u origin master
+```
+
+#### mv(파일이름 변경하기)
+`git`에도 파일 이름을 수정하는` mv` 명령어가 존재한다. `README.md` 를 `README` 로 바꿔보자.
+```
+$ git mv README.md README
+```
+사실 `git mv`명령은 아래 명령어를 수행한 것과 같다.
+
+```
+$ mv README.md README
+$ git rm README.md
+$ git add README
+```
+
+#### log(commit 히스토리 조회하기)
+`log` 명령은 저장소의 `commit history`를 시간순으로 보여준다. 이어서 각 `commit의 SHA-1 체크섬`, `name`, `e-mail`, `commit한 날짜`, `commit 메시지`를 보여준다.
+<br><br>
+`-p`옵션은 각 commit의 diff 결과를 보여준다. 만약 여기에 `-2`를 추가하면 최근 두 개의 결과만 보여준다.
+<br>
+`--oneline`옵션은 각 commit하나를 한 줄로 보여준다.<br>
+`--graph`옵션은 그래프 형태로 commit을 보여준다.<br>
+`--all`옵션은 모든 commit을 보여준다.<br>
