@@ -6,7 +6,7 @@ categories: Django
 ---
 
 
-django는 새로운 Application을 생성하고 views에서 만든 모듈을 화면에 뿌려주기 위해서 최상위 urlconf에서 연결 해줘야한다.<br><br>
+django는 새로운 Application을 생성하고 views에서 만든 모듈을 화면에 뿌려주기 위해서 최상위 urlconf에서 연결 해줘야한다.<br>
 
 그리고 보통 **localhost/polls/** 과 같은 주소값을 갖는다.<br>
 polls라는 Application을 생성하고 url 연결을 한다고 해보자.

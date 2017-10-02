@@ -5,7 +5,7 @@ date:   2017-09-11 15:10:41 +0900
 categories: Git
 ---
 
-Git은 파일을 `Committed`, `Modified`, `Staged` 이렇게 세 가지 상태로 관리한다.<br><br>
+Git은 파일을 `Committed`, `Modified`, `Staged` 이렇게 세 가지 상태로 관리한다.
 
 <h5>Committed</h5>
 데이터가 로컬 데이터베이스에 안전하게 저장됐다는 것을 의미한다.

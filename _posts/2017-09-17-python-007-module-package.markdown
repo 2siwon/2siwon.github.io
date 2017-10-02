@@ -5,7 +5,7 @@ date:   2017-09-17 15:10:41 +0900
 categories: Python
 ---
 
-모듈(module)에 대해서 알아보자.<br><br>
+모듈(module)에 대해서 알아보자.
 
 
 ## 모듈

@@ -7,7 +7,7 @@ categories: Git
 
 
 
-branch와 merge에 대해서 알아보자.<br><br>
+branch와 merge에 대해서 알아보자.
 
 > 실제 개발환경에서 겪을 만한 예제를 보자. `Branch` 와 `Merge`는 보통 이런 식으로 진행한다.
 

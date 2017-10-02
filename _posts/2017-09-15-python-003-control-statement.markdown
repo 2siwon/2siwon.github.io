@@ -5,7 +5,7 @@ date:   2017-09-15 15:10:41 +0900
 categories: Python
 ---
 
-for문을 사용하면 시퀀스형 데이터(String, List, Tuple)등을 순회하면서 접근하여 사용 할 수 있다.<br><br>
+for문을 사용하면 시퀀스형 데이터(String, List, Tuple)등을 순회하면서 접근하여 사용 할 수 있다.
 
 ## for문 (조건에 따른 순회)
 <br>
