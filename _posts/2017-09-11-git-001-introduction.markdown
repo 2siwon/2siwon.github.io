@@ -3,7 +3,6 @@ layout: post
 title:  "Git : 01. 소개"
 date:   2017-09-11 15:10:41 +0900
 categories: Git
-tag : Git
 ---
 
 
