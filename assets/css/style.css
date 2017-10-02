@@ -140,6 +140,7 @@ article.home h3 a:hover,
 article.home h4 a:hover {
 	/*color: #e74c3c;*/
 	color:#7A746E;
+	text-decoration: None;
 }
 
 .author .author-image {
