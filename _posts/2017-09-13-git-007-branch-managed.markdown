@@ -1,12 +1,11 @@
 ---
 layout: post
-title:  "Git : 07. Branch Menagement"
+title:  "Git : 07. Branch 관리"
 date:   2017-09-13 15:10:41 +0900
 categories: Git
 ---
-
-
-`git branch` 명령은 단순히 브랜치를 만들고 삭제하는 것이 아니다. 아무런 옵션 없이 실행하면 branch의 목록을 보여준다.
+지금까지 브랜치를 만들고, Merge하고, 삭제하는 방법에 대해서 살펴봤다. 브랜치를 관리하는 데 필요한 다른 명령도 살펴보자.
+`git branch` 명령은 단순히 브랜치를 만들고 삭제해 주기만 하는 것이 아니다. 아무런 옵션 없이 실행하면 브랜치의 목록을 보여준다
 
 ```
 $ git branch

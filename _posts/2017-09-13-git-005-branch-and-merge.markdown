@@ -1,15 +1,11 @@
 ---
 layout: post
-title:  "Git : 05. Branching and Mergeing"
+title:  "Git : 05. Branch와 Merge"
 date:   2017-09-13 15:10:41 +0900
 categories: Git
 ---
 
-
-
-branch와 merge에 대해서 알아보자.
-
-> 실제 개발환경에서 겪을 만한 예제를 보자. `Branch` 와 `Merge`는 보통 이런 식으로 진행한다.
+실제 개발환경에서 겪을 만한 예제를 보자. `Branch` 와 `Merge`는 보통 이런 식으로 진행한다.
 
 1. 작업 중인 웹사이트가 있다.
 2. `새로운 이슈(issue53)`를 처리할 `issue53 Branch`를 하나 생성한다.
@@ -26,13 +22,13 @@ branch와 merge에 대해서 알아보자.
 
 #### Branch
 
-> 현재 `working directory`에서 이전에 `commit`을 몇 번 했다고 가정한다.
+현재 `working directory`에서 이전에 `commit`을 몇 번 했다고 가정한다.
 
 ![branch](https://git-scm.com/book/en/v2/images/basic-branching-1.png)
 
 <br><br><br>
 
-> `issue53`에 집중할 수 있기 위해 `issue53`를 처리하기 위한 `issue53 branch`를 생성한다.
+issue53`에 집중할 수 있기 위해 `issue53`를 처리하기 위한 `issue53 branch`를 생성한다.
 
 ```
 $ git branch issue53

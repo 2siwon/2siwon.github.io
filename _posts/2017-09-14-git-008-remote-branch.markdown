@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "Git : 08. Remote Branchs"
+title:  "Git : 08. Remote Branch"
 date:   2017-09-14 15:10:41 +0900
 categories: Git
 ---
-
-리모트 Refs는 리모트 저장소에 있는 포인터인 레퍼런스다. 리모트 Ref가 있지만 보통은 remote tracking branch를 사용한다.
+리모트 브랜치란 리모트 저장소에 있는 브랜치를 말한다. 사실 리모트 브랜치도 로컬에 있지만 멋대로 옮기거나 할 수 없고 리모트 저장소와 통신하면 자동으로 업데이트된다. 리모트 브랜치는 브랜치 상태를 알려주는 책갈피라고 볼 수 있다. 이 책갈피로 리모트 저장소에서 마지막으로 데이터를 가져온 시점의 상태를 알 수 있다.
+리모트 Refs는 리모트 저장소에 있는 포인터인 레퍼런스다. <br>
+리모트 Ref가 있지만 보통은 remote tracking branch를 사용한다.
 
 #### remote tracking branch
 `remote tracking branch`는 remote branch를 추적하는 브랜치이다. 이 브랜치는 로컬에 있지만 움직일 수 없다. `remote server`에 연결될 때마다 `remote branch`에 따라서 자동으로 움직일 뿐이다. <br>

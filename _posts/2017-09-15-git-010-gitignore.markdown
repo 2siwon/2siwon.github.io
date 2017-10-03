@@ -9,8 +9,7 @@ categories: Git
 
 
 git으로 관리되는 프로젝트에서 프로젝트에 관련없는 파일이나 제외하고 싶은 파일들이 있을 경우 .gitignore 파일을 생성해서 관리한다.
-
-macOS에서 파일앞의 `.`의 의미는 숨김파일이란 의미이므로 shell에서 `$ ls -al` 과 같은 명령어를 이용해야 파일을 볼 수 있다.<br><br>
+macOS에서 파일앞의 `.`의 의미는 숨김파일이란 의미이므로 shell에서 `$ ls -al` 과 같은 명령어를 이용해야 파일을 볼 수 있다.<br>
 
 .gitignore에 들어가야 할 파일들은 이미 github저장소인 [https://github.com/github/gitignore](https://github.com/github/gitignore) 에서 제공하고 있다. 또한 [https://www.gitignore.io/](https://www.gitignore.io/)에서 원하는 스택을 몇가지 고르면 .gitignore파일을 자동으로 generate해주며 그저 cmd+c, cmd+v하면 된다. <br><br>
 
