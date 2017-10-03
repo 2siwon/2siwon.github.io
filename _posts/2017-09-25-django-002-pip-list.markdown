@@ -29,7 +29,7 @@ vi ~/.pip/pip.conf
 
 <br><br>
 
-####pip.conf
+#### pip.conf
 
 ```
 [list]
