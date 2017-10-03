@@ -79,7 +79,7 @@ SELECT * FROM WHERE NOT id=8;
 Default값은 Ascending(오름차순)으로써 ASC는 생략해도 되며, 문자는 알파벳 순서로 출력된다. ORDER BY절에 선택된 컬럼이 여러 개일 경우 앞(왼쪽)에 정의된 컬럼을 기준으로 먼저 분류한 후, 이후에 나열된 순서대로 분류한다.
 
 emp 테이블
-![order-by](../assets/media/images/sql-002/002-order-by.png?raw=true)
+![order-by](../../assets/media/images/sql-002/002-order-by.png?raw=true)
 
 ###### 이미지 출처 - http://shaeod.tistory.com
 
