@@ -108,7 +108,9 @@ article{
 .post-date {
 	text-transform: uppercase;
 	font-size: 14px;
-	letter-spacing: 3px;
+	letter-spacing: 0.5px;
+	color : #bababa;
+	font-family: 'Roboto', sans-serif;
 }
 
 article {
