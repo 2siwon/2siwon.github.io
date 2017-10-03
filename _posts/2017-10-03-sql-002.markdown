@@ -27,7 +27,7 @@ SELECT DISTINCT column1 FROM table_name;
 주어진 필드의 이름 column1에서 중복된 2개 이상의 값이 있으면 하나의 record로 인식하여 제거하고 보여준다.
 
 User 테이블
-![](../projects/siwonis/_posts/images/sql-002/001-distinct.png)
+![](./images/sql-002/001-distinct.png)
 ###### 이미지 출처 - http://makand.tistory.com
 
 이 user 테이블에 대해서 중복을 제거한 값을 가져와보자.
@@ -79,7 +79,7 @@ SELECT * FROM WHERE NOT id=8;
 Default값은 Ascending(오름차순)으로써 ASC는 생략해도 되며, 문자는 알파벳 순서로 출력된다. ORDER BY절에 선택된 컬럼이 여러 개일 경우 앞(왼쪽)에 정의된 컬럼을 기준으로 먼저 분류한 후, 이후에 나열된 순서대로 분류한다.
 
 emp 테이블
-![](../projects/siwonis/_posts/images/sql-002/002-order-by.png)
+![](./images/sql-002/002-order-by.png)
 
 ###### 이미지 출처 - http://shaeod.tistory.com
 
