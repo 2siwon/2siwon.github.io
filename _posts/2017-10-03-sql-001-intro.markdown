@@ -18,7 +18,7 @@ RDBMS(Relational Database Management System)는 관계형 데이터 관리 시�
 RDBMS의 데이터는 테이블이라는 데이터베이스 객체에 저장된다. 테이블은 관련 데이터 항목의 모음이며 열과 행으로 구성된다.
 
 
-### 기본적인 명령어
+### 기본적인 명령어 모음
 
 - SELECT - 데이터를 추출한다.
 - UPDATE - 데이터를 업데이트한다.

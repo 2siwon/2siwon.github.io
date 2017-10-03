@@ -1,0 +1,77 @@
+---
+layout: post
+title:  "SQL : 02. 문법(1)"
+date:   2017-10-1 15:10:41 +0900
+categories: SQL
+---
+
+
+**SELECT** 문은 데이터베이스에서 데이터를 선택하는 데 사용된다. 리턴 된 데이터는 result-set라고하는 result table에 저장된다. 여기에서 column1, column2, ...는 데이터를 선택할 테이블의 필드(column)의 이름이다.
+
+```
++ SELECT column1, column2 FROM table_name;
+```
+
+테이블의 모든 필드를 선택하려면 *를 사용해서 접근한다.
+
+```
+SELECT * FROM table_name;
+```
+
+**SELECT DISTINCT** 문은 주어진 필드의 이름에서 중복된 row를 제외한 데이터를 가져온다.
+
+```
+SELECT DISTINCT column1 FROM table_name;
+```
+
+주어진 필드의 이름 column1에서 중복된 2개 이상의 값이 있으면 하나의 record로 인식하여 제거하고 보여준다.
+
+User 테이블
+
+![](../projects/siwonis/_posts/images/sql-002/001-distinct.png)
+###### 이미지 출처 - http://makand.tistory.com
+
+이 user 테이블에 대해서 중복을 제거한 값을 가져와보자.
+
+```
+SELECT DISTINCT name FROM User;
+```
+
+**출력결과** <br>
+김영희<br>
+박찬호<br>
+이순신<br>
+이철수<br>
+이해신<br>
+임꺽정<br>
+홍길동<br><br>
+
+**WHERE** 문은 SELECT 문에 조건을 줄 수 있다. User테이블에서 id값이 3이하인 값만 검색하고 싶다면 이렇게 sql문을 작성하면 된다.
+
+```
+SELECT * FROM WHERE User id <= 3;
+```
+
+**AND** WHERE절의 키워드로 AND를 기준으로 양 옆의 조건이 모두 만족할 경우를 의미한다.
+
+```
+SELECT * FROM User WHERE age=34 AND user_pwd=3333;
+```
+
+**OR** WHERE절의 키워드로 OR를 기준으로 양 옆의 조건 중 하나라도 만족 할 경우를 의미한다.
+
+```
+SELECT * FROM User WHERE user_id=test1 OR user_id=test3;
+```
+
+AND나 OR과 같은 조건쿼리문은 여러번 기술해줌으로써 조건을 다양하게 표현할 수 있다.
+
+```
+SELECT user_id, user_pwd FROM User WHERE (id<5 AND age<30) OR (id=9 AND age<30)
+```
+
+**NOT** WHERE 절의 키워드로 조건을 부정할 때 사용한다.
+
+```
+SELECT * FROM WHERE NOT id=8;
+```
