@@ -7,14 +7,14 @@ highlighter: rouge
 markdown: kramdown
 disqus: siwons-blog
 google_analytics: dbyll
-title: Siwon's 개발 블로그
+title: Siwon's DEVELOG
 
 defaults:
   -
     scope:
       path: "" # empty string for all files
     values:
-      title: Siwon's 개발 블로그
+      title: Siwon's DEVELOG
 
 description: Stylish Jekyll Theme
 author:
