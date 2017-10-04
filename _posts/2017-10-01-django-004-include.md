@@ -13,7 +13,7 @@ polls라는 Application을 생성하고 url 연결을 한다고 해보자.
 
 - project_name/config/urls.py
 
-```
+```python
 from django.conf.urls import url
 from django.contrib import admin
 
@@ -29,7 +29,7 @@ urlpatterns = [
 
 - project_name/config/urls.py
 
-```
+```python
 from django.conf.urls import url
 from django.contrib import admin
 
@@ -43,7 +43,7 @@ urlpatterns = [
 
 - project_name/polls/urls.py
 
-```
+```python
 from django.conf.urls import url
 from .views import question_detail, vote
 
