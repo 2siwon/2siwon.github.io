@@ -160,7 +160,7 @@ from 모듈명 import 또는 import 모듈명에서, 같은 모듈명이 존재�
 
 shop.py와 game.py를 func패키지에 넣어본다.
 
-```java
+```
 ├── func
 │   ├── __init__.py
 │   ├── game.py
