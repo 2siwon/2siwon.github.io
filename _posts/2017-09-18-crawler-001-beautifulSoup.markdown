@@ -43,7 +43,7 @@ from bs4 import BeautifulSoup
 크롤링 할 웹 페이지 - http://comic.naver.com/webtoon/list.nhn?titleId=651673&weekday=wed<br>
 이 페이지에서 개발자 도구로 구조를 파악한 후 title만 list로 받아 출력한다.
 
-```
+```python
   1 from bs4 import BeautifulSoup
   2
   3 title_list = list()

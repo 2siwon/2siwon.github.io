@@ -27,7 +27,7 @@ categories: Python
 #### 다른 데이터를 리스트로 변환
 #### list 함수를 사용
 
-```
+```python
 >>> list('League of legends')
 ['L', 'e', 'a', 'g', 'u', 'e', ' ', 'o', 'f', ' ', 'l', 'e', 'g', 'e', 'n', 'd', 's']
 ```
@@ -36,7 +36,7 @@ categories: Python
 
 #### 리스트 항목 추가 (append)
 
-```
+```python
 >>> sample_list1.append('e')
 >>> print(sample_list1)
 ['a','b','c','d','e']
@@ -44,7 +44,7 @@ categories: Python
 
 #### 리스트 병합(extend, +=)
 
-```
+```python
 >>> fruits = ['apple', 'banana', 'melon']
 >>> colors = ['red' ,'green', 'blue']
 >>> fruits.extend(colors)
@@ -52,7 +52,7 @@ categories: Python
 ['apple', 'banana', 'melon', 'red', 'green',' blue']
 ```
 
-```
+```python
 >>> fruits = ['apple', 'banana', 'melon']
 >>> colors = ['red' ,'green', 'blue']
 >>>fruits += colors
@@ -62,7 +62,7 @@ categories: Python
 <br>
 #### 특정 위치에 리스트 항목 추가 (insert)
 
-```
+```python
 list1 = list()
 list1.insert(1, 'mango')
 list1.insert(100, 'pineapple')
@@ -72,34 +72,36 @@ list1.insert(100, 'pineapple')
 파이썬 구문 del을 사용
 >del은 리스트 함수가 아닌, 파이썬 구문이므로 `del <list>[offset]` 형식을 사용한다.
 
-```
+```python
 >>> del fruits[0]
 ```
 
 <br>
 #### 값으로 리스트 항목 삭제 (remove)
-```
+
+```python
 >>> fruits.remove('mango')
 ```
 
 <br>
 #### 리스트 항목 추출 후 삭제 (pop)
 
-```
+```python
 >>> fruits.pop()
 >>> fruits.pop(-3)
 ```
 
 <br>
 #### 값으로 리스트 항목 오프셋 찾기 (index)
-```
+
+```python
 >>> fruits.index('red')
 ```
 
 <br>
 #### 존재여부 확인 (in)
 
-```
+```python
 >>> 'red' in fruits
 True
 ```
@@ -107,7 +109,7 @@ True
 <br>
 값 세기(count)
 
-```
+```python
 >>> fruits.append('red')
 >>> fruits.append('red')
 >>> fruits.count('red')
@@ -135,11 +137,11 @@ True
 
 #### 튜플 생성
 
-```
+```python
 >>> empty_tuple = ()
 ```
 
-```
+```python
 >>> colors = 'red',
 >>> fruits = 'apple', 'banana'
 ```

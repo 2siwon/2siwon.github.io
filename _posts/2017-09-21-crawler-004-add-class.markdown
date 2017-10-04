@@ -12,7 +12,7 @@ categories: Crawler
 
 #### crawler2.py
 
-```
+```python
 import os
 import requests
 import utils
@@ -20,7 +20,7 @@ import pickle
 
 
 class NaverWebtoonCrawler:
-    def \_\_init__(self, webtoon_id):
+    def __init__(self, webtoon_id):
         self.webtoon_id = webtoon_id
         self.episode_list = list()
         self.load(init=True)
@@ -31,19 +31,20 @@ class NaverWebtoonCrawler:
 <br><br>
 
 
-```
+```python
     @property
     def total_episode_count(self):
 
         el = utils.get_webtoon_episode_list(self.webtoon_id)
         return int(el[0].no)
 ```
+
 * 모든 에피소드의 수를 가져오는 메소드. 가장 마지막 에피소드는 index[0]에 저장 되어있다.
 
 
 <br><br>
 
-```
+```python
     @property
     def up_to_date(self):
 
@@ -60,7 +61,7 @@ class NaverWebtoonCrawler:
 <br><br>
 
 
-```
+```python
     def update_episode_list(self, force_update=False):
 
         recent_episode_no = self.episode_list[0].no if self.episode_list else 0
@@ -96,6 +97,7 @@ class NaverWebtoonCrawler:
         # 총 업데이트 된 에피소드 수 리턴
         return len(new_list)
 ```
+
 * 객체 생성 후 업데이트부터 해줘야한다. 하지 않으면 self.episode_list는 초기화상태(빈 리스트)이다.
 * self.episode_list에 존재하지 않는 episode들을 self.episode_list에 추가
 * return : 추가된 episode의 수
@@ -104,7 +106,7 @@ class NaverWebtoonCrawler:
 
 
 
-```
+```python
     def get_first_page_episode_list(self):
         el = utils.get_webtoon_episode_list(self.webtoon_id, 99999)
         self.episode_list = el
@@ -117,7 +119,7 @@ class NaverWebtoonCrawler:
 
 
 
-```
+```python
     def save(self, path=None):
         if not os.path.isdir('db'):
             os.mkdir('db')
@@ -133,7 +135,7 @@ class NaverWebtoonCrawler:
 
 
 
-```
+```python
     def load(self, path=None, init=False):
         try:
             path = f'db/{self.webtoon_id}.txt'
@@ -151,7 +153,7 @@ class NaverWebtoonCrawler:
 
 
 
-```
+```python
     def save_list_thumbnail(self):
         thumbnail_dir = f'webtoon/{self.webtoon_id}_thumbnail'
         os.makedirs(thumbnail_dir, exist_ok=True)
@@ -172,7 +174,7 @@ class NaverWebtoonCrawler:
 <br><br>
 
 
-```
+```python
     def make_list_html(self):
         if not os.path.isdir('webtoon'):
             os.mkdir('webtoon')
@@ -199,7 +201,7 @@ class NaverWebtoonCrawler:
 
 
 
-```
+```python
 if __name__ == '__main__':
 
     crawler = NaverWebtoonCrawler(696617)

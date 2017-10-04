@@ -14,7 +14,7 @@ categories: Python
 
 module/shop.py
 
-```
+```python
 def buy_item():
     print('Buy item!')
 
@@ -23,7 +23,7 @@ buy_item()
 
 module/game.py
 
-```
+```python
 def play_game():
     print('Play game!')
 
@@ -32,7 +32,7 @@ play_game()
 
 module/lol.py
 
-```
+```python
 import game
 import shop
 
@@ -51,17 +51,17 @@ lol.py가 실행될 때, game과 shop가 import되는 순간 해당 코드가 �
 
 이 때, 파이썬 인터프리터를 이용해 실행한 코드인지를 확인하여 단순히 import한 모듈의 경우 실행을 막는 방식을 사용할 수 있다.
 
-각 모듈은 자신의 이름을 가지며, 모듈 이름은 모듈의 전역변수 __name__에서 확인 할 수 있다.
+각 모듈은 자신의 이름을 가지며, 모듈 이름은 모듈의 전역변수 \_\_name__에서 확인 할 수 있다.
 
-```
+```python
 print(__name__)
 ```
 
-파이썬 인터프리터가 실행한 모듈의 경우, __main__이라는 이름을 가진다. 따라서 python <파일명>으로 실행한 경우에만 동작할 부분은 if문으로 감싸준다.
+파이썬 인터프리터가 실행한 모듈의 경우, \_\_main__이라는 이름을 가진다. 따라서 python <파일명>으로 실행한 경우에만 동작할 부분은 if문으로 감싸준다.
 
 **module/shop.py**
 
-```
+```python
 def buy_item():
     print('Buy item!')
 
@@ -71,7 +71,7 @@ if __name__ == '__main__':
 
 **module/game.py**
 
-```
+```python
 def play_game():
     print('Play game!')
 
@@ -81,7 +81,7 @@ if __name__ == '__main__':
 
 **lol.py 리팩토링**
 
-```
+```python
 import game
 import shop
 
@@ -112,7 +112,7 @@ if __name__ == '__main__':
 
 **from 모듈명 import 모듈의 함수명**
 
-```
+```python
 from game import play_game
 from shop import buy_item
 ```
@@ -120,7 +120,7 @@ from shop import buy_item
 **from 모듈명 import \***
 <br>해당 모듈의 모든 함수를 모듈명을 안쓰고 호출 할 수 있다.
 
-```
+```python
 from game import *
 from shop import *
 ```
@@ -160,7 +160,7 @@ from 모듈명 import 또는 import 모듈명에서, 같은 모듈명이 존재�
 
 shop.py와 game.py를 func패키지에 넣어본다.
 
-```
+```java
 ├── func
 │   ├── __init__.py
 │   ├── game.py

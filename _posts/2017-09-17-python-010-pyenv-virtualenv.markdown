@@ -6,7 +6,7 @@ categories: Python
 ---
 
 virtualenv는 독립된 python 환경을 만들어주는 유용한 도구이다.
-virtualenv로 가상환경 설치하는 방법을 알아보자. 
+virtualenv로 가상환경 설치하는 방법을 알아보자.
 
 ## python : virtualenv로 가상환경 설치하기
 

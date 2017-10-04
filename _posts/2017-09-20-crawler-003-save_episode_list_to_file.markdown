@@ -10,14 +10,14 @@ categories: Crawler
 ## 크롤링 한 episode_list를 파일 저장
 
 
-```
+```python
 def save_episode_list_to_file(webtoon_id, episode_list):
 ```
 
 파일이름을 생성하기 위해 해당 웹툰의 고유 id인 webtoon\_id가 필요하다.<br>
 파일이름을 생성하기 위해 episode\_list가 필요하다.(first\_episod\_no, last\_episode\_no)
 
-```
+```python
     filename = '{webtoon_id}_{first_episode_no}_{last_episode_no}.txt'.format(
         webtoon_id = webtoon_id,
         first_episode_no = episode_list[0].no,
@@ -27,7 +27,7 @@ def save_episode_list_to_file(webtoon_id, episode_list):
 
 매개변수를 이용하여 파일이름을 할당한다.
 
-```
+```python
     with open(filename, 'wt') as f:
         for episode in episode_list:
             f.write('|'.join(episode) + '\n')
@@ -42,7 +42,7 @@ save_episode_list_to_file(webtoon_yumi, episode_list)
 
 ## 파일에서 다시 episode_list로 load하기
 
-```
+```python
 def load_episode_list_from_file(path):
     with open(path, 'rt') as f:
 

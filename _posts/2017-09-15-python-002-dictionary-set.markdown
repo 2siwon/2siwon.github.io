@@ -10,7 +10,7 @@ Key-Value 형태로 항목을 가지는 자료구조.
 
 #### 딕셔너리 생성
 
-```
+```python
 >>> empty_dict1 = {}
 >>> empty_dict2 = dict()
 >>> champion_dict = {
@@ -27,7 +27,7 @@ Key-Value 형태로 항목을 가지는 자료구조.
 
 dict 함수를 사용, 두 값의 시퀀스(리스트 또는 튜플)를 딕셔너리로 변환 한다.
 
-```
+```python
 >>> sample = [[1,2], [3,4], [5,6]]
 >>> dict(sample)
 {1: 2, 3: 4, 5: 6}
@@ -35,7 +35,7 @@ dict 함수를 사용, 두 값의 시퀀스(리스트 또는 튜플)를 딕셔�
 <br><br>
 #### 항목 찾기/추가/변경 [key]
 
-```
+```python
 >>> champion_dict['Lux']
 'the Lady of Luminosity'
 >>> champion_dict['Sona'] = 'Maven of the Strings'
@@ -47,7 +47,7 @@ dict 함수를 사용, 두 값의 시퀀스(리스트 또는 튜플)를 딕셔�
 
 #### 결합 (update)
 
-```
+```python
 >>> item_dict = {
 ... 'Doran\'s Ring': 400,
 ... 'Doran\'s Blade': 450,
@@ -57,15 +57,15 @@ dict 함수를 사용, 두 값의 시퀀스(리스트 또는 튜플)를 딕셔�
 >>> com_dict.update(champion_dict)
 >>> com_dict.update(item_dict)
 >>> com_dict
-
 ```
+
 서로 같은 키가 있을 경우, update에 주어진 딕셔너리의 값이 할당된다.
 
 <br><br>
 
 #### 삭제 (del)
 
-```
+```python
 >>> del com_dict['Doran\'s Blade']
 >>> del com_dict['Doran\'s Ring']
 >>> del com_dict['Doran\'s Shild']
@@ -99,7 +99,7 @@ True/False를 반환한다.
 
 #### 셋 생성
 
-```
+```python
 >>> empty_set = set()
 >>> champions = {'lux', 'ahri', 'ezreal'}
 ```
@@ -108,12 +108,12 @@ True/False를 반환한다.
 #### 형변환
 문자열, 리스트, 튜플, 딕셔너리를 셋으로 변환할 수 있으며, 중복된 값이 사라진다.
 
-```
+```python
 >>> set('ezreal')
 {e, z, a, l, r}
 ```
 
-```
+```python
 >>> set(champion_dict)
 {'Ahri', 'Lux', 'Ezreal', 'Sona', 'Teemo'}
 ```
@@ -124,7 +124,7 @@ True/False를 반환한다.
 #### 집합 연산
 
 | 연산자  | 설명  |
-|---|---|
+|---    |---   |
 | \|  | 합집합(Union)  |
 | &  | 교집합(Intersection)  |
 |  - | 차집합(Difference)  |
@@ -134,7 +134,7 @@ True/False를 반환한다.
 |  >= | 상위집합(Superset)  |
 |  > |  진상위집합(Proper superset) |
 
-```
+```python
 >>> A = {1,2,3,4,5}
 >>> B = {4,5,6,7,8,9}
 >>> C = {4,5,6}

@@ -9,7 +9,7 @@ categories: Python
 
 ## 파일 생성하기(w)
 
-```
+```python
 f = open("새파일.txt", 'w')
 f.close()
 ```
@@ -28,7 +28,7 @@ f.close()
 
 ## 파일을 쓰기 모드로 열어 출력값 적기(write)
 
-```
+```python
 f = open("C:/Python/새파일.txt", 'w')
 for i in range(1, 11):
     data = "%d번째 줄입니다.\n" % i
@@ -43,7 +43,7 @@ f.close()
 
 #### readline() 함수 이용하기
 
-```
+```python
 f = open("C:/Python/새파일.txt", 'r')
 line = f.readline()
 print(line)
@@ -52,7 +52,7 @@ f.close()
 
 이전에 생성한 **새파일.txt** 을 읽어 readline() 함수로 한 줄을 읽어와 출력하면
 
-```
+```python
 1번째 줄입니다.
 ```
 
@@ -61,7 +61,7 @@ f.close()
 
 만약 모든 라인을 출력하고 싶다면?
 
-```
+```python
 f = open("C:/Python/새파일.txt", 'r')
 while True:
     line = f.readline()
@@ -76,7 +76,7 @@ while문을 사용한다.
 
 #### readlines() 함수 이용하기
 
-```
+```python
 f = open("C:/Python/새파일.txt", 'r')
 lines = f.readlines()
 for line in lines:
@@ -91,7 +91,7 @@ f.close()
 
 #### read() 함수 이용하기
 
-```
+```python
 f = open("C:/Python/새파일.txt", 'r')
 data = f.read()
 print(data)
@@ -106,7 +106,7 @@ f.read()는 파일의 내용 전체를 문자열로 리턴한다. 따라서 위 
 
 쓰기모드('w')로 원래 있던 파일의 객체를 열면 그 안의 내용은 모두 **덮어쓰기** 된다. 원래 있던 값을 유지하면서 새로운 내용을 추가하는 파일 추가 모드('a')를 알아보자.
 
-```
+```python
 f = open("C:/Python/새파일.txt",'a')
 for i in range(11, 20):
     data = "%d번째 줄입니다.\n" % i
@@ -120,7 +120,7 @@ f.close()
 
 ## with문과 함께 사용하기
 
-```
+```python
 with open("foo.txt", "w") as f:
     f.write("Life is too short, you need python")
 ```

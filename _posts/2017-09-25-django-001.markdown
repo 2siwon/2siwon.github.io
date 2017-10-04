@@ -14,7 +14,7 @@ django 의 프로젝트 구조, 새 프로젝트 구성방법, MTV pattern 등�
 
 ## 프로젝트 구조
 
-```
+```python
 projects/
 	django/ # Django project들
 		djangogirls_project/ # Django project folder
