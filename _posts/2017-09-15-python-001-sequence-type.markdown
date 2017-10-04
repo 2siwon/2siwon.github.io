@@ -15,7 +15,7 @@ categories: Python
 <br><br>
 **리스트의 생성**
 
-```
+```python
 >>> empty_list1 = []
 >>> empty_list2 = list()
 >>> sample_list1 = ['a','b','c','d']
