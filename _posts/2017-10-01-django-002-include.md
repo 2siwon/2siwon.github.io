@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Django : 04. include 함수 이용 URL 연결하기"
+title:  "Django : 02. include 함수 이용 URL 연결하기"
 date:   2017-10-1 15:10:41 +0900
 categories: Django
 tag: [Django]
