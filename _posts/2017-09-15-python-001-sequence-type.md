@@ -3,6 +3,7 @@ layout: post
 title:  "Python : 01. 시퀀스 타입"
 date:   2017-09-15 15:10:41 +0900
 categories: Python
+tag: [Python]
 ---
 
 파이썬에 내장된 Sequence-type 에는 `문자열`, `리스트`, `튜플`이 있다.

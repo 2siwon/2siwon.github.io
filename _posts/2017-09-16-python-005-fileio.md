@@ -3,6 +3,7 @@ layout: post
 title:  "Python : 05. 파일입출력"
 date:   2017-09-16 15:10:41 +0900
 categories: Python
+tag: [Python]
 ---
 
 파일 입출력에 대해 알아보자.

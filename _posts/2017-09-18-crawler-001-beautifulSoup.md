@@ -3,6 +3,7 @@ layout: post
 title:  "Crawler : 01. BeautifulSoup 활용하기"
 date:   2017-09-18 15:10:41 +0900
 categories: Crawler
+tag: [Crawler, BeautifulSoup]
 ---
 
 

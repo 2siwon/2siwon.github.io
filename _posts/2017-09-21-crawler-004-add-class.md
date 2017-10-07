@@ -3,6 +3,7 @@ layout: post
 title:  "Crawler : 04. 네이버 웹툰 크롤러 만들기(3)"
 date:   2017-09-21 15:10:41 +0900
 categories: Crawler
+tag: [Crawler, NaverCrawler]
 ---
 
 네이버 웹툰 크롤러 만들기(2)까지 작성한 코드는 utils 모듈로 리팩토링. 이하 코드는 utils를 import하여 작성.

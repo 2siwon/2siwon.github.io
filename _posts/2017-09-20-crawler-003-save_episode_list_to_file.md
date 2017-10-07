@@ -3,6 +3,7 @@ layout: post
 title:  "Crawler : 03. 네이버 웹툰 크롤러 만들기(2)"
 date:   2017-09-20 15:10:41 +0900
 categories: Crawler
+tag: [Crawler, NaverCrawler]
 ---
 
 네이버 웹툰 크롤러 만들기(1)에서 특정 웹툰의 id값과 page값으로 에피소드 리스트 크롤링을 해와서 출력까지 해봤다. namedtuple로 만든 Episode의 인스턴스인 episode를 가독성을 생각하여 파일로 저장해보자. 이 후 다시 episode_list로 load하는 모듈을 만들어보자.

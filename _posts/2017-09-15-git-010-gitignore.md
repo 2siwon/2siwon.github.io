@@ -4,6 +4,7 @@ title:  "Git : 10. gitignore로 버전관리에서 특정 파일 제외하기
 "
 date:   2017-09-15 15:10:41 +0900
 categories: Git
+tag: [Git, Tip]
 ---
 
 

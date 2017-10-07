@@ -3,6 +3,7 @@ layout: post
 title:  "Python : 04. 함수"
 date:   2017-09-16 15:10:41 +0900
 categories: Python
+tag: [Python]
 ---
 
 반복적인 작업을 하는 코드를 재사용이 가능하게 정의해 놓은 것이 **함수** 이다.

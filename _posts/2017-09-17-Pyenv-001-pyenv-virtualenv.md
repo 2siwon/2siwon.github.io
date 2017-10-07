@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Python : 10. virtualenv로 가상환경 설치하기"
+title:  "Pyenv : 01. virtualenv로 가상환경 설치하기"
 date:   2017-09-17 15:10:41 +0900
-categories: Python
+categories: Pyenv
+tag: [Pyenv, Virtualenv, Tip]
 ---
 
 virtualenv는 독립된 python 환경을 만들어주는 유용한 도구이다.

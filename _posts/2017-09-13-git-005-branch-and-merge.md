@@ -3,6 +3,7 @@ layout: post
 title:  "Git : 05. Branch와 Merge"
 date:   2017-09-13 15:10:41 +0900
 categories: Git
+tag: [Git]
 ---
 
 실제 개발환경에서 겪을 만한 예제를 보자. `Branch` 와 `Merge`는 보통 이런 식으로 진행한다.

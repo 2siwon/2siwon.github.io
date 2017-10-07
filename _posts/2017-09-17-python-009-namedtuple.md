@@ -3,6 +3,7 @@ layout: post
 title:  "Python : 09. 네임드튜플"
 date:   2017-09-17 15:10:41 +0900
 categories: Python
+tag: [Python]
 ---
 
 namedtuple은 클래스를 명시할 때 인스턴스 변수만 있는 것 처럼 사용할 수 있는 tuple이다.

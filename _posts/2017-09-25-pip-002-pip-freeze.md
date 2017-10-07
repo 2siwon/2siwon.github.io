@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Django : 03. pip freeze로 패키지 한번에 설치하기(개발환경 복구하기)"
+title:  "pip : 02. pip freeze로 패키지 한번에 설치하기(개발환경 복구하기)"
 date:   2017-09-25 15:10:41 +0900
-categories: Django
+categories: pip
+tag: [pip, Tip]
 ---
 
 
