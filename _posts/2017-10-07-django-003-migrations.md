@@ -49,9 +49,7 @@ $ ./manage.py sqlmigrate [app-name] [migration-name]
 
 <br><br>
 
-**backward**
-
-- migration은 항상 forward로 진행된다. 그렇다면 backward는 어떻게할까?
+**migration은 항상 forward로 진행된다. 그렇다면 backward는 어떻게할까?**
 
 ```
 ---zero---
