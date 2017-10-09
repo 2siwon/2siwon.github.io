@@ -121,8 +121,10 @@ def base(base_i):
 @base(30)
 def mysum(x, y):
     return x + y
+```
 
-
-print(mysum(1, 2))
+```python
+>>> mysum(1, 2)
+>>> 33
 ```
 
