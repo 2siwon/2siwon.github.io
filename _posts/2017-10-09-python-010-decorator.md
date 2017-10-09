@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Python : 10. Decorator"
-date:   2017-10-7 15:10:41 +0900
+date:   2017-10-9 15:10:41 +0900
 categories: Python
 tag: [Python]
 ---
@@ -12,7 +12,7 @@ tag: [Python]
 >>> fn1 = lambda x,y : x + y
 >>> f1(1, 2)
 >>> 3
-``` 
+```
 
 ```python
 >>> fn2 = lambda x,y : x + y + 10
@@ -37,9 +37,9 @@ tag: [Python]
 >>> myfn = mysum()
 >>> myfn(1, 2)
 >>> 3
->>> 
+>>>
 >>> mysum()(1, 2)
->>> 3 
+>>> 3
 ```
 
 ```
@@ -65,10 +65,10 @@ def base_10(fn):
 	def wrap(x, y):
 		return fn(x, y) + 10
 	return wrap
-	
+
 def mysum(x, y):
 	return x + y
-	
+
 mywrap = base_10(my_sum)
 ```
 
@@ -86,7 +86,7 @@ def base_10(fn):
 	def wrap(x, y):
 		return fn(x, y) + 10
 	return wrap
-	
+
 @base_10
 def mysum(x, y):
 	return x + y
@@ -127,4 +127,3 @@ def mysum(x, y):
 >>> mysum(1, 2)
 >>> 33
 ```
-

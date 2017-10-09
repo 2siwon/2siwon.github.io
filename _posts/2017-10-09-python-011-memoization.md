@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Python : 11. Memoization"
-date:   2017-10-7 15:10:41 +0900
+date:   2017-10-9 15:10:41 +0900
 categories: Python
 tag: [Python]
 ---
@@ -12,7 +12,7 @@ tag: [Python]
 1. 전달받은 매개변수 x, y를 튜플로묶은 딕셔너리의 key를 생성한다.<br>
 2. x, y가 처음보는 매개변수라면(cached_sum에 저장되어 있지 않은 키라면) (x + y) + 10의 결과를 해당 key를 index로 cached_sum에 저장한다.
 3. x, y가 이미 cached_sum에 저장되어 있다면 cached_sum에 x, y를 튜플로 묶은 키를 index로 사용하여 이미 저장되어 있는 결과값을 리턴한다.
- 
+
 ```python
 cached_sum = dict()
 cached_mul = dict()
