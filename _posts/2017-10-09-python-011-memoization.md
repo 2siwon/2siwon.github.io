@@ -14,8 +14,6 @@ tag: [Python]
 3. x, y가 이미 cached_sum에 저장되어 있다면 cached_sum에 x, y를 튜플로 묶은 키를 index로 사용하여 이미 저장되어 있는 결과값을 리턴한다.
  
 ```python
-import time
-
 cached_sum = dict()
 cached_mul = dict()
 
