@@ -12,7 +12,7 @@ tag: [Python]
 >>> fn1 = lambda x,y : x + y
 >>> f1(1, 2)
 >>> 3
-``` 
+```
 
 ```python
 >>> fn2 = lambda x,y : x + y + 10
@@ -37,17 +37,17 @@ tag: [Python]
 >>> myfn = mysum()
 >>> myfn(1, 2)
 >>> 3
->>> 
+>>>
 >>> mysum()(1, 2)
->>> 3 
+>>> 3
 ```
 
-```
+```python
 >>> lambda x,y : x + y
 >>> <function __main__.<lambda>>
 ```
 
-```
+```python
 >>> (lambda x,y : x + y)(1, 2)
 >>> 3
 ```
@@ -56,7 +56,7 @@ tag: [Python]
 
 <br><br>
 
-base\_10 함수는 매개변수로 함수롤 받아서 그 함수의 리턴값에 10을 더해주는 함수이다.<br>
+base\_10 함수는 매개변수로 함수를 받아서 그 함수의 리턴값에 10을 더해주는 함수이다.<br>
 base\_10 함수가 호출되면 그 즉시 wrap이라는 함수가 정의되고 정의된 wrap함수가 리턴이 된다. <br>
 mysum 함수는 매개변수를 2개 받아 더해주는 함수이다. 이 함수 자체를 base\_10함수에 넘겨주고 반환 값을 함수변수(?)에 담아 사용이 가능한 것이다.
 
@@ -65,14 +65,14 @@ def base_10(fn):
 	def wrap(x, y):
 		return fn(x, y) + 10
 	return wrap
-	
+
 def mysum(x, y):
 	return x + y
-	
+
 mywrap = base_10(my_sum)
 ```
 
-```
+```python
 >>> mywrap(1, 2)
 >>> 13
 ```
@@ -86,13 +86,13 @@ def base_10(fn):
 	def wrap(x, y):
 		return fn(x, y) + 10
 	return wrap
-	
+
 @base_10
 def mysum(x, y):
 	return x + y
 ```
 
-```
+```python
 >>> mysum(1, 2)
 >>> 13
 ```
