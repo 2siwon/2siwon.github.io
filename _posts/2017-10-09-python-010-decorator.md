@@ -30,14 +30,17 @@ tag: [Python]
 아래 예제와 같이 람다도 함수처럼 묶어서 사용 가능하다.
 
 ```python
->>> def mysum():
-...	 	fn = lambda x,y : x + y
-...		return = fn
->>>
->>> myfn = mysum()
+def mysum():
+  fn = lambda x,y : x + y
+  return fn
+
+myfn = mysum()
+```
+
+```python
 >>> myfn(1, 2)
 >>> 3
->>>
+>>> # 또는
 >>> mysum()(1, 2)
 >>> 3
 ```
