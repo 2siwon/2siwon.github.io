@@ -12,7 +12,7 @@ tag: [Python]
 >>> fn1 = lambda x,y : x + y
 >>> f1(1, 2)
 >>> 3
-```
+``` 
 
 ```python
 >>> fn2 = lambda x,y : x + y + 10
@@ -30,27 +30,24 @@ tag: [Python]
 아래 예제와 같이 람다도 함수처럼 묶어서 사용 가능하다.
 
 ```python
-def mysum():
-  fn = lambda x,y : x + y
-  return fn
-
-myfn = mysum()
-```
-
-```python
+>>> def mysum():
+...	 	fn = lambda x,y : x + y
+...		return = fn
+>>>
+>>> myfn = mysum()
 >>> myfn(1, 2)
 >>> 3
->>> # 또는
+>>> 
 >>> mysum()(1, 2)
->>> 3
+>>> 3 
 ```
 
-```python
+```
 >>> lambda x,y : x + y
 >>> <function __main__.<lambda>>
 ```
 
-```python
+```
 >>> (lambda x,y : x + y)(1, 2)
 >>> 3
 ```
@@ -68,10 +65,10 @@ def base_10(fn):
 	def wrap(x, y):
 		return fn(x, y) + 10
 	return wrap
-
+	
 def mysum(x, y):
 	return x + y
-
+	
 mywrap = base_10(my_sum)
 ```
 
@@ -89,13 +86,13 @@ def base_10(fn):
 	def wrap(x, y):
 		return fn(x, y) + 10
 	return wrap
-
+	
 @base_10
 def mysum(x, y):
 	return x + y
 ```
 
-```python
+```
 >>> mysum(1, 2)
 >>> 13
 ```
@@ -103,3 +100,29 @@ def mysum(x, y):
 <br><br>
 
 즉, 장식자는 특정 함수를 객체로 받는 함수로써 객체지향적인 개념에서 중요한 재사용성에 부합하는 기능이다.
+
+<br><br><br><br>
+
+**인자를 받는 데코레이터**
+
+데코레이터 자체에 인자를 받아서 사용 할 수도 있다.
+
+```python
+def base(base_i):
+    def outer(fn):
+        def wrap(x, y):
+            return fn(x, y) + base_i
+
+        return wrap
+
+    return outer
+
+
+@base(30)
+def mysum(x, y):
+    return x + y
+
+
+print(mysum(1, 2))
+```
+
