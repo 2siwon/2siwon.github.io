@@ -6,7 +6,7 @@ categories: Django
 tag: [Django]
 ---
 
-**Making queries** 데이터 모델을 생성하면 Django는 자동으로 객체를 생성, 검색, 업데이트 및 삭제할 수 있는 데이터베이스 추상화 API를 제공한다. API를 사용하는 방법을 알아보자. 자세한 내용은 [데이터 모델 레퍼런스](data model reference)을 참조하자.
+**Making queries** 데이터 모델을 생성하면 Django는 자동으로 객체를 생성, 검색, 업데이트 및 삭제할 수 있는 데이터베이스 추상화 API를 제공한다. API를 사용하는 방법을 알아보자. 자세한 내용은 [데이터 모델 레퍼런스](https://docs.djangoproject.com/ko/1.11/ref/models/)을 참조하자.
 
 <br><br>
 
