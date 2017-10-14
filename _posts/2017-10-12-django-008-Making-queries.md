@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Django : 07. Making queries"
+title:  "Django : 07. Making queries(1)"
 date:   2017-10-12 15:10:41 +0900
 categories: Django
 tag: [Django]
