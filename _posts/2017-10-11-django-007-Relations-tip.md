@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Django : 06. Model - Relations 추가내용"
+title:  "Django : 07. Model - Relations 추가내용"
 date:   2017-10-11 15:10:41 +0900
 categories: Django
 tag: [Django]
