@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Django : 10. Authentication"
+title:  "Django : 10. Authentication(1)"
 date:   2017-10-17 15:10:41 +0900
 categories: Django
 tag: [Django]
