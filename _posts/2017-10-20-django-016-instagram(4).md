@@ -1,8 +1,17 @@
+---
+layout: post
+title:  "Django : 16. 인스타그램(4)"
+date:   2017-10-20 15:10:41 +0900
+categories: Django
+tag: [Django]
+---
+
+
 ## form의 widget들에 form-contorl 추가
 
 #### forms.py
 
-부트스트랩을 사용하기 위해서 widget에 form-control을 추가 
+부트스트랩을 사용하기 위해서 widget에 form-control을 추가
 
 ```python
 from django import forms
@@ -122,4 +131,82 @@ def comment_create(request, post_pk):
                 return redirect(next)
             return redirect('post_detail', post_pk=post_pk)
 
+```
+
+## signup 구현
+
+#### urls.py
+
+```python
+    # Member
+    url(r'^member/signup/$',
+        member_views.signup,
+        name='signup'),
+```
+
+#### member/views.py
+
+```python
+from django.http import HttpResponse
+from django.shortcuts import render
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
+
+def signup(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+
+        if username and password:
+            user = User.objects.create_user(
+                username=username,
+                password=password
+            )
+        return HttpResponse(f'{user.username}, {user.password}')
+
+    return render(request, 'member/signup.html')
+```
+
+#### member/signup.html
+
+```html
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="signup">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label>Username <input type="text" name="username"></label>
+        <label>Password <input type="password" name="password"></label>
+
+        <button class="btn btn-primary btn-block">회원가입</button>
+    </form>
+</div>
+
+{% endblock %}
+```
+
+## 유저 중복 검사 기능 추가
+
+#### member/views.py
+
+```python
+def signup(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+
+        if username and password:
+            # 이미 username항목이 주어진 username값으로 존재하는 User가 있는지 검사
+            if User.objects.filter(username=username).exists():
+                return HttpResponse(f'Username {username} is already exist')
+            # username, password가 주어졌고 중복되는 User가 없다면 User생성
+            user = User.objects.create_user(
+                username=username,
+                password=password
+            )
+        return HttpResponse(f'{user.username}, {user.password}')
+
+    return render(request, 'member/signup.html')
 ```

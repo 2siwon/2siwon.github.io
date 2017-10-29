@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Django : 15. 인스타그램(3)"
-date:   2017-10-19 15:10:41 +0900
+date:   2017-10-20 15:10:41 +0900
 categories: Django
 tag: [Django]
 ---
@@ -151,8 +151,6 @@ form_create.html
     {% csrf_token %}
     {{ form }}
     <button>글을 쓰자</button>
-
-
 </form>
 ```
 
