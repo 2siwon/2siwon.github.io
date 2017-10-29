@@ -66,7 +66,7 @@ def post_create(request):
 
 ```html
 <form action="" method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
+
     <input type="file" name="photo">
     <button>글을 쓰자</button>
 </form>
@@ -148,7 +148,7 @@ form_create.html
 
 ```html
 <form action="" method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
+
     {{ form }}
     <button>글을 쓰자</button>
 </form>
