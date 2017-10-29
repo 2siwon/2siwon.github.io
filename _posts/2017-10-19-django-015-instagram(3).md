@@ -64,7 +64,7 @@ def post_create(request):
 
 #### post_create.html
 
-```python
+```html
 <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <input type="file" name="photo">
@@ -146,7 +146,7 @@ def post_create(request):
 
 form_create.html
 
-```python
+```html
 <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form }}
@@ -252,7 +252,7 @@ def comment_create(request, post_pk):
                 post=post,
                 content=form.cleaned_data['content']
             )
-            return redirect('post_detail', pk=post_pk)
+            return redirect('post_detail', post_pk=post_pk)
     else:
         form = CommentForm()
         context = {
