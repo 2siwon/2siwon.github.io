@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Django : 15. 인스타그램(3)"
+title:  "Django : 15. 인스타그램(3) - Post페이지(list, create)추가, Form, Comment페이지(create)추가"
 date:   2017-10-20 15:10:41 +0900
 categories: Django
 tag: [Django]
@@ -66,7 +66,7 @@ def post_create(request):
 
 ```html
 <form action="" method="POST" enctype="multipart/form-data">
-
+    {% csrf_token %}
     <input type="file" name="photo">
     <button>글을 쓰자</button>
 </form>
@@ -148,7 +148,7 @@ form_create.html
 
 ```html
 <form action="" method="POST" enctype="multipart/form-data">
-
+    {% csrf_token %}
     {{ form }}
     <button>글을 쓰자</button>
 </form>

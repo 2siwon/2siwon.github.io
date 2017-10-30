@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Django : 16. 인스타그램(4)"
+title:  "Django : 16. 인스타그램(4) - forms.py에 부트스트랩 적용, 역참조(related_name), next(template), signup 구현, 유저중복검사 구현"
 date:   2017-10-20 15:10:41 +0900
 categories: Django
 tag: [Django]
@@ -133,6 +133,8 @@ def comment_create(request, post_pk):
 
 ```
 
+<br><br>
+
 ## signup 구현
 
 #### urls.py
@@ -186,6 +188,8 @@ def signup(request):
 
 {% endblock %}
 ```
+
+<br><br>
 
 ## 유저 중복 검사 기능 추가
 
