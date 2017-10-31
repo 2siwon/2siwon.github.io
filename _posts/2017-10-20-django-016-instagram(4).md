@@ -83,7 +83,8 @@ class PostComment(models.Model):
 
 #### post_list.html
 
-```python
+```html
+{% raw %}
 {% extends 'base.html' %}
 
 {% block content %}
@@ -112,6 +113,7 @@ class PostComment(models.Model):
 
 
 {% endblock %}
+{% endraw %}
 ```
 
 #### comment_create
