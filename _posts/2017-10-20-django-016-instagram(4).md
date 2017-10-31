@@ -3,7 +3,7 @@ layout: post
 title:  "Django : 16. 인스타그램(4) - forms.py에 부트스트랩 적용, 역참조(related_name), next(template), signup 구현, 유저중복검사 구현"
 date:   2017-10-20 15:10:41 +0900
 categories: Django
-tag: [Django]
+tag: [Django, Instagram]
 ---
 
 
@@ -173,6 +173,7 @@ def signup(request):
 #### member/signup.html
 
 ```html
+{% raw %}
 {% extends 'base.html' %}
 
 {% block content %}
@@ -187,6 +188,7 @@ def signup(request):
 </div>
 
 {% endblock %}
+{% endraw %}
 ```
 
 <br><br>
