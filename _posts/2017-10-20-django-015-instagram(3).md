@@ -3,7 +3,7 @@ layout: post
 title:  "Django : 15. 인스타그램(3) - Post페이지(list, create)추가, Form, Comment페이지(create)추가"
 date:   2017-10-20 15:10:41 +0900
 categories: Django
-tag: [Django]
+tag: [Django, Instagram]
 ---
 
 ## post의 list 구현
@@ -65,11 +65,13 @@ def post_create(request):
 #### post_create.html
 
 ```html
+{% raw %}
 <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <input type="file" name="photo">
     <button>글을 쓰자</button>
 </form>
+{% endraw %}
 ```
 
 <br><br>
@@ -147,11 +149,13 @@ def post_create(request):
 form_create.html
 
 ```html
+{% raw %}
 <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form }}
     <button>글을 쓰자</button>
 </form>
+{% endraw %}
 ```
 
 <br><br>
@@ -185,6 +189,7 @@ def post_detail(request, post_pk):
 post_detail외의 나머지 페이지들도 똑같이 리팩토링 해준다.
 
 ```html
+{% raw %}
 {% load static %}
 <!doctype html>
 <html lang="en">
@@ -205,11 +210,13 @@ post_detail외의 나머지 페이지들도 똑같이 리팩토링 해준다.
     </div>
 </body>
 </html>
+{% endraw %}
 ```
 
 #### post_detail.html
 
 ```html
+{% raw %}
 {% extends 'base.html' %}
 
 {% block content %}
@@ -221,6 +228,7 @@ post_detail외의 나머지 페이지들도 똑같이 리팩토링 해준다.
     {% endif %}
 </div>
 {% endblock %}
+{% endraw %}
 ```
 
 <br><br>
@@ -262,6 +270,7 @@ def comment_create(request, post_pk):
 #### comment_create.html
 
 ```html
+{% raw %}
 {% extends 'base.html' %}
 
 {%block content %}
@@ -274,6 +283,7 @@ def comment_create(request, post_pk):
 
 </div>
 {% endblock %}
+{% endraw %}
 ```
 
 <br><br>
