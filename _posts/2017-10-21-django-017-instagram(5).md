@@ -3,7 +3,7 @@ layout: post
 title:  "Django : 17. 인스타그램(5) - SignupForm, field custom validation, 로그인(LoginForm)"
 date:   2017-10-21 15:10:41 +0900
 categories: Django
-tag: [Django]
+tag: [Django, Instagram]
 ---
 
 ## SignupForm을 사용
@@ -64,6 +64,7 @@ def signup(request):
 #### member/signup.html
 
 ```html
+{% raw %}
 {% extends 'base.html' %}
 
 {% block content %}
@@ -76,6 +77,7 @@ def signup(request):
 </div>
 
 {% endblock %}
+{% endraw %}
 ```
 
 <br><br>
@@ -168,6 +170,7 @@ def login(request):
 #### templates/base.html
 
 ```html
+{% raw %}
 ...
     <div class="container">
         <a href="{% url 'post_list' %}"><h1>Instagram</h1></a>
@@ -184,11 +187,13 @@ def login(request):
         {% endblock %}
     </div>
 ...
+{% endraw %}
 ```
 
 #### templates/member/login.html
 
 ```html
+{% raw %}
 {% extends 'base.html' %}
 
 {% block content %}
@@ -203,6 +208,7 @@ def login(request):
 
 </div>
 {% endblock%}
+{% endraw %}
 ```
 
 <br><br>

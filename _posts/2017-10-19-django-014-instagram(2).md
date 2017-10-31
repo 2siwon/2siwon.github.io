@@ -3,7 +3,7 @@ layout: post
 title:  "Django : 14. 인스타그램(2) - Post앱 생성"
 date:   2017-10-19 15:10:41 +0900
 categories: Django
-tag: [Django]
+tag: [Django, Instagram]
 ---
 
 

@@ -3,7 +3,7 @@ layout: post
 title:  "Django : 18. 인스타그램(6) - pwd확인, SignupForm리팩토링, include와 with사용 template 리팩토링, CustomUserModel"
 date:   2017-10-21 15:10:41 +0900
 categories: Django
-tag: [Django]
+tag: [Django, Instagram]
 ---
 
 ## password확인, SignupForm 리팩토링
@@ -87,6 +87,7 @@ def signup(request):
 #### templates/include/form-horizontal.html
 
 ```html
+{% raw %}
 <form action="" method="POST" class="form-horizontal">
     {% csrf_token %}
     {% for field in form %}
@@ -115,6 +116,7 @@ def signup(request):
     {% endif %}
     <button class="btn btn-primary btn-block">{{ submit_text }}</button>
 </form>
+{% endraw %}
 ```
 
 #### member/login.html
@@ -174,6 +176,8 @@ def signup(request):
 
 ## CustomUserModel
 
+### REQUIRED_FIELDS, create\_superuser 재정의
+
 
 setting.py와 admin.py에 아래와 같이 등록해준다.
 
@@ -196,6 +200,30 @@ admin.site.register(User, UserAdmin)
 #### models.py
 
 ```python
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import (
+    AbstractUser,
+    UserManager as DjangoUserManager
+)
 from django.db import models
+
+
+class UserManager(DjangoUserManager):
+
+    # createsuperuser 할 때 age를 물어보지않고 기본값 30
+    def create_superuser(self, *args, **kwargs):
+        super().create_superuser(age=30, *args, **kwargs)
+
+
+class User(AbstractUser):
+    img_profile = models.ImageField(
+        upload_to='user',
+        blank=True)
+
+    age = models.IntegerField()
+
+    objects = UserManager()
+
+    # createsuperuser시에 반드시 물어봐야 할 필드
+    # (기존 REQUIRED_FIELDS메소드에 age추가
+    # REQUIRED_FIELDS = AbstractUser.REQUIRED_FIELDS + ['age']
 ```
