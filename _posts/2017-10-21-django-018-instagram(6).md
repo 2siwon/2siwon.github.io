@@ -121,7 +121,8 @@ def signup(request):
 
 #### member/login.html
 
-```python
+```html
+{% raw %}
 {% extends 'base.html' %}
 
 {% block content %}
@@ -129,11 +130,13 @@ def signup(request):
     {% include 'include/form-horizontal.html' with form=login_form submit_text='로그인' %}
 </div>
 {% endblock %}
+{% endraw %}
 ```
 
 #### member/signup.html
 
-```python
+```html
+{% raw %}
 {% extends 'base.html' %}
 
 {% block content %}
@@ -142,6 +145,7 @@ def signup(request):
 </div>
 
 {% endblock %}
+{% endraw %}
 ```
 
 #### member/views.py
